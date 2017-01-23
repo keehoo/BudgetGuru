@@ -1,7 +1,4 @@
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,9 +9,13 @@ public class BudgetEntry {
     private Long id;
     @Embedded
     User user;
+
     @Embedded
     BudgetItem budgetItem;
     private LocalDateTime dateTime;
+
+    public BudgetEntry() {
+    }
 
     public Long getId() {
         return id;

@@ -1,25 +1,12 @@
+import javax.ejb.Stateless;
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 
-@Entity
+@Stateless
 @Embeddable
 public class User {
 
-    @GeneratedValue
-    private Long id;
 
     public User() {
-    }
-
-    @Id
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     private String login;
