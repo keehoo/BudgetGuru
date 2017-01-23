@@ -1,14 +1,16 @@
 import javax.ejb.Stateless;
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Stateless
-@Embeddable
+@Entity
 public class User {
 
 
     public User() {
     }
 
+    @Id
     private String login;
     private String password;
     private String name;

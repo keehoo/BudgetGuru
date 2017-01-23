@@ -7,7 +7,8 @@ public class BudgetEntry {
     @Id
     @GeneratedValue
     private Long id;
-    @Embedded
+
+    @ManyToOne
     User user;
 
     @Embedded
