@@ -24,8 +24,7 @@
         <!-- mysql -->
         <version.mysql>5.1.37</version.mysql>
         <jdbc.datasource>java:jboss/datasources/MySQLDS</jdbc.datasource>
-        <mysql.connection.url>jdbc:mysql://127.0.0.1:3306/test??useUnicode=yes&amp;characterE
-            ncoding=UTF-8
+        <mysql.connection.url>jdbc:mysql://127.0.0.1:3306/test??useUnicode=yes&amp;characterEncoding=UTF-8
         </mysql.connection.url>
         <mysql.username>root</mysql.username>
         <mysql.password>root</mysql.password>
