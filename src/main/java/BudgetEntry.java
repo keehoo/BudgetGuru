@@ -11,6 +11,14 @@ public class BudgetEntry {
     @ManyToOne
     User user;
 
+    public BudgetItem getBudgetItem() {
+        return budgetItem;
+    }
+
+    public void setBudgetItem(BudgetItem budgetItem) {
+        this.budgetItem = budgetItem;
+    }
+
     @Embedded
     BudgetItem budgetItem;
     private LocalDateTime dateTime;

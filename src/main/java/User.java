@@ -1,8 +1,7 @@
-import javax.ejb.Stateless;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Stateless
+
 @Entity
 public class User {
 
