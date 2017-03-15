@@ -16,6 +16,7 @@ public class BudgetEntryDao {
     public void saveDummyDataToDatabase() {
         BudgetEntry budgetEntry = new BudgetEntry();
         budgetEntry.setBudgetItem(new BudgetItem(new BigDecimal(100.0)));
+       // budgetEntry.budgetItem.setCost();
         budgetEntry.setDateTime(LocalDateTime.now());
         try {
             if (entityManager == null) System.out.println("BudgetEntry is null");
