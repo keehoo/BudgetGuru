@@ -13,7 +13,7 @@ public class BudgetEntryDao {
     @PersistenceContext
     private EntityManager entityManager;
 
-    void saveDummyDataToDatabase() {
+    public void saveDummyDataToDatabase() {
         BudgetEntry budgetEntry = new BudgetEntry();
         budgetEntry.setBudgetItem(new BudgetItem(new BigDecimal(100.0)));
         budgetEntry.setDateTime(LocalDateTime.now());
