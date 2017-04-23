@@ -1,3 +1,5 @@
+package com.kree.keehoo.budgetguru;
+
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

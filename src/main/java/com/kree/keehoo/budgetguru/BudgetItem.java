@@ -1,3 +1,5 @@
+package com.kree.keehoo.budgetguru;
+
 import javax.persistence.Embeddable;
 import java.math.BigDecimal;
 
