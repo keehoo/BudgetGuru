@@ -24,9 +24,7 @@
             min-height: 200px;
         }
         @media (max-width: 600px) {
-            .carousel-caption {
-                display: none;
-            }
+
         }
     </style>
 </head>

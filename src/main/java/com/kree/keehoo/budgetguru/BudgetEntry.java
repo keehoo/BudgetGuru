@@ -1,30 +1,45 @@
 package com.kree.keehoo.budgetguru;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = BudgetEntry.GET_ALL_BUDGET_ENTRIES,
+                query = "select u from BudgetEntry u")
+})
 public class BudgetEntry {
+
+    final public static String GET_ALL_BUDGET_ENTRIES= "BudgetEntry.GET_ALL_BUDGET_ENTRIES";
 
     @Id
     @GeneratedValue
     private Long id;
+    @Embedded
+    BudgetItem budgetItem;
 
-    @ManyToOne
-    User user;
+    @ManyToOne(cascade = {CascadeType.ALL})
+    public User user;
 
-    public BudgetItem getBudgetItem() {
-        return budgetItem;
+    private LocalDateTime dateTime;
+
+    public BudgetEntry() {
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void setBudgetItem(BudgetItem budgetItem) {
         this.budgetItem = budgetItem;
     }
 
-    @Embedded
-    BudgetItem budgetItem;
-    private LocalDateTime dateTime;
-
-    public BudgetEntry() {
+    public BudgetItem getBudgetItem() {
+        return budgetItem;
     }
 
     public Long getId() {

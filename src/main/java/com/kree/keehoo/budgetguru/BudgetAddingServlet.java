@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(urlPatterns = "/")
 public class BudgetAddingServlet extends HttpServlet {
@@ -24,6 +25,8 @@ public class BudgetAddingServlet extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
         dispatcher.forward(req, resp);
 
+        List<BudgetEntry> budgetEntries = budgetEntryDao.budgetItemList();
+        for (BudgetEntry b : budgetEntries) System.out.println(b.getUser().getLastName());
 
     }
 }

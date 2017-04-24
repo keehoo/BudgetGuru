@@ -5,6 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * Created by k on 20.02.17.
@@ -20,13 +21,19 @@ public class BudgetEntryDao {
         budgetEntry.setBudgetItem(new BudgetItem(new BigDecimal(100.0)));
        // budgetEntry.budgetItem.setCost();
         budgetEntry.setDateTime(LocalDateTime.now());
+        budgetEntry.setUser(new User("krzys", "password", "Krzysiek", "Kubicki", "kkubicki2@gmail.com"));
         try {
-            if (entityManager == null) System.out.println("BudgetEntry is null");
+            //if (entityManager == null) System.out.println("BudgetEntry is null");
             entityManager.persist(budgetEntry);
         } catch (NullPointerException nullPointer) {
             System.out.println("Null Pointer " + nullPointer.getMessage());
             System.out.println(nullPointer.toString());
         }
+    }
+
+    public List<BudgetEntry> budgetItemList() {
+        List<BudgetEntry> list = entityManager.createNamedQuery(BudgetEntry.GET_ALL_BUDGET_ENTRIES).getResultList();
+        return list;
     }
 
 }
