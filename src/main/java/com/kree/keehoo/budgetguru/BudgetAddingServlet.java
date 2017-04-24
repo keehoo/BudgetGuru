@@ -1,6 +1,7 @@
 package com.kree.keehoo.budgetguru;
 
 import javax.inject.Inject;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,6 +20,9 @@ public class BudgetAddingServlet extends HttpServlet {
 
         System.out.println("Servlet entry point - GET");
         budgetEntryDao.saveDummyDataToDatabase();
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
+        dispatcher.forward(req, resp);
 
 
     }
