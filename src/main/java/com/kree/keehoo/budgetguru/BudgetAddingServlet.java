@@ -13,20 +13,17 @@ import java.util.List;
 @WebServlet(urlPatterns = "/")
 public class BudgetAddingServlet extends HttpServlet {
 
-    @Inject
-    BudgetEntryDao budgetEntryDao;
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        System.out.println("Servlet entry point - GET");
         budgetEntryDao.saveDummyDataToDatabase();
-
+        List<BudgetEntry> budgetEntries = budgetEntryDao.budgetItemList();
+        req.setAttribute("budgetentries",budgetEntries);
+        for (BudgetEntry b : budgetEntries) System.out.println(b.getUser().getLastName());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
         dispatcher.forward(req, resp);
 
-        List<BudgetEntry> budgetEntries = budgetEntryDao.budgetItemList();
-        for (BudgetEntry b : budgetEntries) System.out.println(b.getUser().getLastName());
-
     }
+    @Inject
+    BudgetEntryDao budgetEntryDao;
 }

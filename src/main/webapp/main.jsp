@@ -29,6 +29,26 @@
     </style>
 </head>
 
+<body>
+
+
+<ul class="list-group" a>
+    <c:forEach items="${budgetentries}" var="budgetentries">
+        <li class="list-group-item">
+            <div class="checkbox">
+                <p type="text">
+                    <input type="checkbox" value="${budgetentries.budgetItem.getValue()}" name="newAdmins">${budgetentries.user.login}
+                    / ${budgetentries.user.password}
+
+                </p>
+            </div>
+        </li>
+    </c:forEach>
+</ul>
+
+
+</body>
+
 
 
 </html>

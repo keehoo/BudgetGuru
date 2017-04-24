@@ -25,7 +25,6 @@ class BudgetItem {
         }
     }
 
-
     public void setCost() {
         cost = true;
     }
@@ -42,7 +41,6 @@ class BudgetItem {
     public boolean isCost() {
         return cost;
     }
-
 
     public BigDecimal getValue() {
         return value;
