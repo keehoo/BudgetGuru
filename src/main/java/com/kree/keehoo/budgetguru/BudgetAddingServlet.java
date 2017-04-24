@@ -18,7 +18,8 @@ public class BudgetAddingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         System.out.println("Servlet entry point - GET");
-
         budgetEntryDao.saveDummyDataToDatabase();
+
+
     }
 }

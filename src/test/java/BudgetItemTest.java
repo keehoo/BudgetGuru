@@ -1,8 +1,9 @@
+package com.kree.keehoo.budgetguru;
+
 import org.junit.Test;
 
 import java.math.BigDecimal;
 
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -27,7 +28,7 @@ public class BudgetItemTest {
         assertTrue(!budgetItem.isCost());
     }
 
-    @Test (expected=IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class)
     public void shouldReturnAnExceptionForZeroValue() {
         BudgetItem budgetItem = new BudgetItem(new BigDecimal(0));
     }
