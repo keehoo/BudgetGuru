@@ -31,21 +31,29 @@
 
 <body>
 
+<h1>${surname}</h1>
 
-<ul class="list-group" a>
-    <c:forEach items="${budgetentries}" var="budgetentries">
-        <li class="list-group-item">
-            <div class="checkbox">
-                <p type="text">
-                    <input type="checkbox" value="${budgetentries.budgetItem.getValue()}" name="newAdmins">${budgetentries.user.login}
-                    / ${budgetentries.user.password}
+<%--<ul class="list-group" a>--%>
+    <%--<c:forEach items="${budgetentries}" var="budgetentries">--%>
+        <%--<li class="list-group-item">--%>
+            <%--<div class="checkbox">--%>
+                <%--<p type="text">--%>
+                    <%--<input type="checkbox" value="${budgetentries.budgetItem.getValue()}" name="newAdmins">${budgetentries.user.login}--%>
+                    <%--/ ${budgetentries.user.password}--%>
 
-                </p>
-            </div>
-        </li>
-    </c:forEach>
-</ul>
+                <%--</p>--%>
+            <%--</div>--%>
+        <%--</li>--%>
+    <%--</c:forEach>--%>
+<%--</ul>--%>
+<div>
+    <form method="post" action="createBE">
+        First Name : <input type="text" name="username">
+        Cost : <input type="number" name="cost">
+        <input type="submit" value="createBE">
+    </form>
 
+</div>
 
 </body>
 

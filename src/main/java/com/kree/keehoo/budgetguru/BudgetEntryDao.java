@@ -14,7 +14,7 @@ import java.util.List;
 public class BudgetEntryDao {
 
     @PersistenceContext
-    private EntityManager entityManager;
+    public EntityManager entityManager;
 
     public void saveDummyDataToDatabase() {
         BudgetEntry budgetEntry = new BudgetEntry();
