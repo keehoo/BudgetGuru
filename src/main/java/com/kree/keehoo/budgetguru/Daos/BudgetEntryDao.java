@@ -1,4 +1,8 @@
-package com.kree.keehoo.budgetguru;
+package com.kree.keehoo.budgetguru.Daos;
+
+import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
+import com.kree.keehoo.budgetguru.BudgetItem;
+import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

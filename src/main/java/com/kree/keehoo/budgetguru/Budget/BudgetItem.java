@@ -1,4 +1,4 @@
-package com.kree.keehoo.budgetguru;
+package com.kree.keehoo.budgetguru.Budget;
 
 import javax.persistence.Embeddable;
 import java.math.BigDecimal;
@@ -9,7 +9,7 @@ class BudgetItem {
     private BigDecimal value;
     private boolean cost;
 
-    BudgetItem(BigDecimal value) throws IllegalArgumentException {
+    public BudgetItem(BigDecimal value) throws IllegalArgumentException {
         if (value.doubleValue() == 0) throw new IllegalArgumentException("The value cannot be zero");
         this.value = value;
         checkIfItsACosAndAssignACostFlat();

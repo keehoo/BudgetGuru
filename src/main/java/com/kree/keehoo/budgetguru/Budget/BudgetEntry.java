@@ -1,4 +1,6 @@
-package com.kree.keehoo.budgetguru;
+package com.kree.keehoo.budgetguru.Budget;
+
+import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;

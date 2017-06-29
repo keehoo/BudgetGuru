@@ -1,4 +1,4 @@
-package com.kree.keehoo.budgetguru;
+package com.kree.keehoo.budgetguru.Users;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
