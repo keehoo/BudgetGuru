@@ -4,7 +4,7 @@ import javax.persistence.Embeddable;
 import java.math.BigDecimal;
 
 @Embeddable
-class BudgetItem {
+public class BudgetItem {
 
     private BigDecimal value;
     private boolean cost;
