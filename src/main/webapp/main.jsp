@@ -47,12 +47,29 @@
     <%--</c:forEach>--%>
 <%--</ul>--%>
 <div>
-    <form method="post" action="createBE">
-        First Name : <input type="text" name="username">
-        Cost : <input type="number" name="cost">
-        <input type="submit" value="createBE">
+    <form method="post" action="createUser">
+        Login         : <input type="text" name="login">
+        First Name    : <input type="text" name="firstname">
+        Last Name     : <input type="text" name="lastname">
+        email         : <input type="text" name="email">
+        password      : <input type="password" name="password">
+        <input type="submit" value="createUser">
     </form>
 
+</div>
+
+<div>
+
+    <c:forEach items="${users}" var="eb">
+        <li>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="${eb.login}+${eb.email}">
+                   </input>
+                </label>
+            </div>
+        </li>
+    </c:forEach>
 </div>
 
 </body>
