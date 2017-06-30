@@ -24,13 +24,11 @@ public class BudgetAddingServlet extends HttpServlet {
         if (budgetEntries != null) {
             System.out.println("BUDGET ENTRIES ARENT NULL");
         }
-        for (BudgetEntry b : budgetEntries) {
-            System.out.println(b.getUser().getLastName());
-            //userSurnames.add(b.getUser().getLastName());
-        }
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
         String userSurname = budgetEntries.get(0).getUser().getLastName();
         req.setAttribute("surname", userSurname);
+        resp.sendRedirect("/");
 
         dispatcher.forward(req, resp);
 

@@ -1,18 +1,24 @@
 package com.kree.keehoo.budgetguru.Users;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
+
+import javax.persistence.*;
 
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = User.GET_ALL_USERS,
+                query = "select u from User u")
+})
 public class User {
 
+    final public static String GET_ALL_USERS = "User.GET_ALL_USERS";
 
     public User() {
     }
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
     private String login;
     private String password;
