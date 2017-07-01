@@ -1,8 +1,10 @@
 package com.kree.keehoo.budgetguru.Servlets;
 
 import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
+import com.kree.keehoo.budgetguru.Budget.BudgetItem;
 import com.kree.keehoo.budgetguru.Daos.BudgetEntryDao;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
+import com.kree.keehoo.budgetguru.Session.SessionData;
 import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.inject.Inject;
@@ -13,6 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.util.Calendar;
 import java.util.List;
 
 @WebServlet(urlPatterns = "/")
@@ -21,24 +25,29 @@ public class BudgetAddingServlet extends HttpServlet {
     @Inject
     UserDao userDao;
 
+    @Inject
+    BudgetEntryDao budgetEntryDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        userDao.addUser(new User("keehoo", "password", "Krzysztof", "Kubicki", "kkubicki2@gmail.com"));
-        userDao.addUser(new User("magda", "password", "Magdalena", "Kubicka", "magdalenakubicka@gmail.com"));
+        BudgetEntry budgetEntry = new BudgetEntry();
+        BudgetItem budgetItem = new BudgetItem(new BigDecimal(500));
+        budgetEntry.setBudgetItem(budgetItem);
+        budgetEntry.setUser(userDao.getUserByLogin("keehoo"));
+        budgetEntry.setDateTime(Calendar.getInstance().getTimeInMillis());
 
-        List<User> users = userDao.getAllUsers();
+        budgetEntryDao.addBudgetEntry(budgetEntry);
 
-        for (User user : users) {
-            System.out.println(user.getEmail());
-        }
-        req.setAttribute("user", users);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
-        dispatcher.forward(req, resp);
+            List<User> users = userDao.getAllUsers();
+
+            for (User user : users) {
+                System.out.println(user.getEmail());
+            }
+            req.setAttribute("user", users);
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
+            dispatcher.forward(req, resp);
+
 
     }
-
-    @Inject
-    BudgetEntryDao budgetEntryDao;
 }

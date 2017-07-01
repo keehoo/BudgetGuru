@@ -28,8 +28,12 @@ public class UserDao {
     }
 
     public User getUserByLogin(String login) {
-    return entityManager.createNamedQuery(User.GET_USER, User.class).setParameter("login", login).getSingleResult();
-
+        try {
+            return entityManager.createNamedQuery(User.GET_USER, User.class).setParameter("login", login).getSingleResult();
+        } catch (Throwable e) {
+            System.out.println("NOT FOUND 404");
+            return null;
+        }
     }
 
     public void addUser(User u) {
@@ -38,14 +42,13 @@ public class UserDao {
         List<String> logins = new ArrayList<>();
         for (User user : users) {
             logins.add(user.getLogin());
-            System.out.println("added "+user.getLogin());
+            System.out.println("added " + user.getLogin());
         }
         if (!logins.contains(login)) {
             entityManager.persist(u);
-        }
-        else {
-            System.out.println("\n Cannot add user : "+u.toString()+" " +
-                    "\n[ERROR] Already a user with login "+login);
+        } else {
+            System.out.println("\n Cannot add user : " + u.toString() + " " +
+                    "\n[ERROR] Already a user with login " + login);
         }
     }
 }

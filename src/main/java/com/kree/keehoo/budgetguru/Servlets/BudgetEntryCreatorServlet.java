@@ -18,7 +18,7 @@ import java.io.IOException;
 public class BudgetEntryCreatorServlet extends HttpServlet {
 
     @Inject
-    UserDao userDao;
+    private UserDao userDao;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

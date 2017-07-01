@@ -20,17 +20,15 @@ public class BudgetEntryDao {
     @PersistenceContext
     public EntityManager entityManager;
 
-    public void saveDummyDataToDatabase() {
-
-    }
-
     public List<BudgetEntry> budgetItemList() {
         List<BudgetEntry> list = entityManager.createNamedQuery(BudgetEntry.GET_ALL_BUDGET_ENTRIES).getResultList();
         return list;
     }
 
-    public void addUser(User user) {
-        entityManager.persist(user);
-    }
+    public void addBudgetEntry(BudgetEntry budgetEntry) {
 
+        if (!budgetItemList().isEmpty() && !budgetItemList().contains(budgetEntry)) {
+            entityManager.persist(budgetEntry);
+        }
+    }
 }

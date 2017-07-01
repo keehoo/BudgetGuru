@@ -17,13 +17,14 @@ public class BudgetEntry {
     @Id
     @GeneratedValue
     private Long id;
+
     @Embedded
     BudgetItem budgetItem;
 
     @ManyToOne(cascade = {CascadeType.ALL})
     public User user;
 
-    private LocalDateTime dateTime;
+    private Long dateTime;
 
     public BudgetEntry() {
     }
@@ -52,11 +53,11 @@ public class BudgetEntry {
         this.id = id;
     }
 
-    public LocalDateTime getDateTime() {
+    public Long getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
+    public void setDateTime(Long dateTime) {
         this.dateTime = dateTime;
     }
 }

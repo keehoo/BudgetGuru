@@ -5,7 +5,6 @@ import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.print.attribute.standard.Media;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -33,7 +32,8 @@ public class UsersRestService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public User getUserByLogin(@QueryParam("login") String login) {
-        System.out.println("Querying db for user "+login);
+        System.out.println("Querying db for user " + login);
+        //TODO: should add response here.
         return userDao.getUserByLogin(login);
     }
 
@@ -45,7 +45,7 @@ public class UsersRestService {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addContact(@Valid User user) {
 
-        System.out.println("User to be added: "+user.getName());
+        System.out.println("User to be added: " + user.getName());
         userDao.addUser(user);
         return Response.accepted().build();
 
