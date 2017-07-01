@@ -27,6 +27,10 @@ public class UserDao {
         return Collections.emptyList();
     }
 
+    public User getUserByLogin(String login) {
+    return entityManager.createNamedQuery(User.GET_USER, User.class).setParameter("login", login).getSingleResult();
+
+    }
 
     public void addUser(User u) {
         String login = u.getLogin();

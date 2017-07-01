@@ -5,6 +5,7 @@ import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.print.attribute.standard.Media;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -27,6 +28,17 @@ public class UsersRestService {
     public List<User> getUsers() {
         return userDao.getAllUsers();
     }
+
+    @Path("/getUser")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public User getUserByLogin(@QueryParam("login") String login) {
+        System.out.println("Querying db for user "+login);
+        return userDao.getUserByLogin(login);
+    }
+
+    // POST
+
 
     @Path("/addUser")
     @POST

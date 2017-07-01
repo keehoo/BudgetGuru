@@ -8,11 +8,14 @@ import javax.persistence.*;
 @Entity
 @NamedQueries({
         @NamedQuery(name = User.GET_ALL_USERS,
-                query = "select u from User u")
+                query = "select u from User u"),
+        @NamedQuery(name = User.GET_USER,
+        query = "select u from User u where u.login = :login")
 })
 public class User {
 
     final public static String GET_ALL_USERS = "User.GET_ALL_USERS";
+    final public static String GET_USER = "User.GET_USER";
 
     public User() {
     }
