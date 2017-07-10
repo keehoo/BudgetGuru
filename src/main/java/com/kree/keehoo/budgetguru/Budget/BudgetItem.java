@@ -1,6 +1,7 @@
 package com.kree.keehoo.budgetguru.Budget;
 
 import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import java.math.BigDecimal;
 
 @Embeddable

@@ -17,7 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Calendar;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @WebServlet(urlPatterns = "/")
 public class BudgetAddingServlet extends HttpServlet {
@@ -31,22 +33,30 @@ public class BudgetAddingServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        User user = new User();
+        user.setName("Krzysztof");
+        user.setLastName("Kubicki");
+        user.setLogin("keehoo");
+        user.setEmail("kkubicki2@gmail.com");
+        user.setPassword("password");
+
+
         BudgetEntry budgetEntry = new BudgetEntry();
         BudgetItem budgetItem = new BudgetItem(new BigDecimal(500));
         budgetEntry.setBudgetItem(budgetItem);
-        budgetEntry.setUser(userDao.getUserByLogin("keehoo"));
-        budgetEntry.setDateTime(Calendar.getInstance().getTimeInMillis());
 
+        budgetEntry.setDateTime(Calendar.getInstance().getTimeInMillis());
+        Set<BudgetEntry> set = new HashSet<>();
+        set.add(budgetEntry);
+        user.setBudgetEntries(set);
+        userDao.addUser(user);
+        budgetEntry.setUserId(user);
         budgetEntryDao.addBudgetEntry(budgetEntry);
 
-            List<User> users = userDao.getAllUsers();
 
-            for (User user : users) {
-                System.out.println(user.getEmail());
-            }
-            req.setAttribute("user", users);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
-            dispatcher.forward(req, resp);
+        //req.setAttribute("user", users);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
+        dispatcher.forward(req, resp);
 
 
     }
