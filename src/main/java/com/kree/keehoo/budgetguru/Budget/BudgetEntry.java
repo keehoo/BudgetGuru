@@ -21,20 +21,13 @@ public class BudgetEntry {
     @Embedded
     BudgetItem budgetItem;
 
-    @ManyToOne(cascade = {CascadeType.ALL})
-    public User user;
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    public User userId;
 
     private Long dateTime;
 
     public BudgetEntry() {
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public void setBudgetItem(BudgetItem budgetItem) {
@@ -59,5 +52,13 @@ public class BudgetEntry {
 
     public void setDateTime(Long dateTime) {
         this.dateTime = dateTime;
+    }
+
+    public User getUserId() {
+        return userId;
+    }
+
+    public void setUserId(User userId) {
+        this.userId = userId;
     }
 }

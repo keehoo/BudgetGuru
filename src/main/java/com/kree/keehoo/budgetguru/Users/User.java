@@ -3,6 +3,8 @@ package com.kree.keehoo.budgetguru.Users;
 import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -28,6 +30,17 @@ public class User {
     private String name;
     private String lastName;
     private String email;
+
+    @OneToMany(mappedBy = "user")
+    private Set<BudgetEntry> budgetEntries = new HashSet<>();
+
+    public Set<BudgetEntry> getBudgetEntries() {
+        return budgetEntries;
+    }
+
+    public void setBudgetEntries(Set<BudgetEntry> budgetEntries) {
+        this.budgetEntries = budgetEntries;
+    }
 
     public User(String login, String password, String name, String lastName, String email) {
         this.id = id;

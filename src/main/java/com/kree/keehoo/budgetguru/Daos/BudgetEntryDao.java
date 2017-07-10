@@ -27,7 +27,7 @@ public class BudgetEntryDao {
 
     public void addBudgetEntry(BudgetEntry budgetEntry) {
 
-        if (!budgetItemList().isEmpty() && !budgetItemList().contains(budgetEntry)) {
+        if (!budgetItemList().contains(budgetEntry)) {
             entityManager.persist(budgetEntry);
         }
     }
