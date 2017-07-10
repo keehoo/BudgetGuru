@@ -34,30 +34,23 @@ public class BudgetAddingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         User user = new User();
-        user.setName("Krzysztof");
         user.setLastName("Kubicki");
-        user.setLogin("keehoo");
+        user.setName("Krzysztof");
         user.setEmail("kkubicki2@gmail.com");
         user.setPassword("password");
+        userDao.addUser(user);
 
 
         BudgetEntry budgetEntry = new BudgetEntry();
-        BudgetItem budgetItem = new BudgetItem(new BigDecimal(500));
-        budgetEntry.setBudgetItem(budgetItem);
-
-        budgetEntry.setDateTime(Calendar.getInstance().getTimeInMillis());
-        Set<BudgetEntry> set = new HashSet<>();
-        set.add(budgetEntry);
-        user.setBudgetEntries(set);
-        userDao.addUser(user);
-        budgetEntry.setUserId(user);
+        budgetEntry.setBudgetItem(new BudgetItem(new BigDecimal(500)));
         budgetEntryDao.addBudgetEntry(budgetEntry);
 
+        budgetEntry.setUser(user);
+
+        budgetEntryDao.updateBudgetEntry(budgetEntry);
 
         //req.setAttribute("user", users);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
         dispatcher.forward(req, resp);
-
-
     }
 }

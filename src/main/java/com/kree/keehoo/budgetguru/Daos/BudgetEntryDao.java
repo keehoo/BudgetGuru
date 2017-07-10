@@ -31,4 +31,8 @@ public class BudgetEntryDao {
             entityManager.persist(budgetEntry);
         }
     }
+
+    public void updateBudgetEntry(BudgetEntry budgetEntry) {
+        entityManager.merge(budgetEntry);
+    }
 }
