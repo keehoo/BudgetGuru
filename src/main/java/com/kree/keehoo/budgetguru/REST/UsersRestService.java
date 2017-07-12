@@ -10,6 +10,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Krzysiek on 2017-07-01.
@@ -24,7 +25,7 @@ public class UsersRestService {
     @Path("/allUsers")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<User> getUsers() {
+    public Set<User> getUsers() {
         return userDao.getAllUsers();
     }
 

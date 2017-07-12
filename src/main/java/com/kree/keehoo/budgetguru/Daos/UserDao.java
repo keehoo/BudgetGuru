@@ -5,9 +5,7 @@ import com.kree.keehoo.budgetguru.Users.User;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Krzysiek on 2017-06-30.
@@ -18,13 +16,14 @@ public class UserDao {
     @PersistenceContext
     public EntityManager entityManager;
 
-    public List<User> getAllUsers() {
+    public Set<User> getAllUsers() {
         List<User> usersList = entityManager.createNamedQuery(User.GET_ALL_USERS).getResultList();
-        if (usersList != null && usersList.size() != 0) {
-            return usersList;
+        Set<User> set = new HashSet<>(usersList);
+        if (usersList.size() != 0) {
+            return set;
         }
         System.out.println("Returning empty users list");
-        return Collections.emptyList();
+        return Collections.emptySet();
     }
 
     public User getUserByLogin(String login) {
@@ -38,8 +37,8 @@ public class UserDao {
 
     public void addUser(User u) {
         String login = u.getLogin();
-        List<User> users = getAllUsers();
-        List<String> logins = new ArrayList<>();
+        Set<User> users = getAllUsers();
+        Set<String> logins = new HashSet<>();
         for (User user : users) {
             logins.add(user.getLogin());
             System.out.println("added " + user.getLogin());

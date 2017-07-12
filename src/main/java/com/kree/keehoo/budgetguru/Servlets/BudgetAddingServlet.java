@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.Random;
 
 @WebServlet(urlPatterns = "/")
 public class BudgetAddingServlet extends HttpServlet {
@@ -29,20 +30,19 @@ public class BudgetAddingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         addDummyUser();
-
         User keehoo = userDao.getUserByLogin("keehoo");
+        addDummyBudgetItem(keehoo);
 
-        BudgetEntry budgetEntry = new BudgetEntry(new BudgetItem(new BigDecimal(500)));
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
+        dispatcher.forward(req, resp);
+    }
+
+    private void addDummyBudgetItem(User keehoo) {
+        BudgetEntry budgetEntry = new BudgetEntry(new BudgetItem(new BigDecimal((new Random()).nextInt(1000))));
 
         budgetEntryDao.addBudgetEntry(budgetEntry);
         budgetEntry.setUser(keehoo);
         budgetEntryDao.updateBudgetEntry(budgetEntry);
-//
-//        budgetEntryDao.updateBudgetEntry(budgetEntry);
-//
-//        //req.setAttribute("user", users);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
-        dispatcher.forward(req, resp);
     }
 
     private void addDummyUser() {

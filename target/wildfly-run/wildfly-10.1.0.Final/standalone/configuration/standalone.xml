@@ -428,7 +428,7 @@
 
     <deployments>
         <deployment name="ROOT.war" runtime-name="ROOT.war">
-            <content sha1="d6a59f6f6e19b23d6cb3313ea1e8077cc1063926"/>
+            <content sha1="05f011244c380be6f7712abe4a952c1bb4f004fd"/>
         </deployment>
     </deployments>
 </server>

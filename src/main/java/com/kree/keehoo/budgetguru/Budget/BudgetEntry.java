@@ -27,11 +27,6 @@ public class BudgetEntry {
 
     public BudgetEntry(BudgetItem budgetItem) {
         this.budgetItem = budgetItem;
-        boolean isCost;
-        if (budgetItem.getValue().doubleValue() > 0) {
-            isCost = true;
-        } else isCost = false;
-
     }
 
     public BudgetEntry() {

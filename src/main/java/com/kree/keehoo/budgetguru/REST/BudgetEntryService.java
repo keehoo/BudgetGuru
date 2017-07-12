@@ -27,6 +27,7 @@ public class BudgetEntryService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<BudgetEntry> getAllBudgets() {
+        System.out.println("Returning budget entry list");
         return budgetEntryDao.budgetItemList();
     }
 }

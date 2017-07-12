@@ -4,6 +4,7 @@ import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.inject.Inject;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,5 +34,8 @@ public class BudgetEntryCreatorServlet extends HttpServlet {
         System.out.println(user.toString());
 
         userDao.addUser(user);
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
+        dispatcher.forward(req, resp);
     }
 }
