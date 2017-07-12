@@ -35,6 +35,15 @@ public class UserDao {
         }
     }
 
+    public User getUserById(long id) {
+        try {
+            return entityManager.createNamedQuery(User.GET_USER_BY_ID, User.class).setParameter("id", id).getSingleResult();
+        } catch (Throwable e) {
+            System.out.println("NOT FOUND 404");
+            return null;
+        }
+    }
+
     public void addUser(User u) {
         String login = u.getLogin();
         Set<User> users = getAllUsers();

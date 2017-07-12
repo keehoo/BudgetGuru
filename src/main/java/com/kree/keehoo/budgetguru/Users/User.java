@@ -12,12 +12,15 @@ import java.util.Set;
         @NamedQuery(name = User.GET_ALL_USERS,
                 query = "select u from User u"),
         @NamedQuery(name = User.GET_USER,
-        query = "select u from User u where u.login = :login")
+        query = "select u from User u where u.login = :login"),
+        @NamedQuery(name = User.GET_USER_BY_ID,
+                query = "select u from User u where u.id = :id"),
 })
 public class User {
 
     final public static String GET_ALL_USERS = "User.GET_ALL_USERS";
     final public static String GET_USER = "User.GET_USER";
+    final public static String GET_USER_BY_ID = "User.GET_USER_BY_ID";
 
     public User() {
     }

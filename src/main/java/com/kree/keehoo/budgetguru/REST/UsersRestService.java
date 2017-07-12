@@ -38,6 +38,15 @@ public class UsersRestService {
         return userDao.getUserByLogin(login);
     }
 
+    @Path("/getUser")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public User getUserByLogin(@QueryParam("id") long id) {
+        System.out.println("Querying db for user " + id);
+        //TODO: should add response here.
+        return userDao.getUserById(id);
+    }
+
     // POST
 
 
