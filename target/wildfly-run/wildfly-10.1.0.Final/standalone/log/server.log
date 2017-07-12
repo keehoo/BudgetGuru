@@ -1,7 +1,7 @@
-2017-07-12 12:16:52,528 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
-2017-07-12 12:16:52,736 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
-2017-07-12 12:16:52,835 INFO  [org.jboss.as] (MSC service thread 1-5) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
-2017-07-12 12:16:52,837 DEBUG [org.jboss.as.config] (MSC service thread 1-5) Configured system properties:
+2017-07-12 12:26:32,857 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
+2017-07-12 12:26:32,996 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-07-12 12:26:33,054 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
+2017-07-12 12:26:33,055 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
 	[Standalone] = 
 	awt.toolkit = sun.awt.X11.XToolkit
 	file.encoding = UTF-8
@@ -85,63 +85,63 @@
 	user.language = en
 	user.name = krzysztof
 	user.timezone = Europe/Warsaw
-2017-07-12 12:16:52,837 DEBUG [org.jboss.as.config] (MSC service thread 1-5) VM Arguments: -D[Standalone] -Dorg.jboss.boot.log.file=/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/log/server.log -Dlogging.configuration=file:/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/configuration/logging.properties 
-2017-07-12 12:16:54,076 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
-2017-07-12 12:16:54,091 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.4.0.Final
-2017-07-12 12:16:54,098 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.4.0.Final
-2017-07-12 12:16:54,118 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
-2017-07-12 12:16:54,138 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
-2017-07-12 12:16:54,178 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
-2017-07-12 12:16:54,182 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.4.Final)
-2017-07-12 12:16:54,186 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
-2017-07-12 12:16:54,189 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
-2017-07-12 12:16:54,192 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 4.0.21.Final
-2017-07-12 12:16:54,196 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
-2017-07-12 12:16:54,202 INFO  [org.jboss.as.security] (MSC service thread 1-4) WFLYSEC0001: Current PicketBox version=4.9.6.Final
-2017-07-12 12:16:54,204 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
-2017-07-12 12:16:54,224 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
-2017-07-12 12:16:54,227 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = h2
-2017-07-12 12:16:54,369 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
-2017-07-12 12:16:54,369 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
-2017-07-12 12:16:54,399 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0003: Undertow 1.4.0.Final starting
-2017-07-12 12:16:54,516 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path '/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
-2017-07-12 12:16:54,521 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0012: Started server default-server.
-2017-07-12 12:16:54,528 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0018: Host default-host starting
-2017-07-12 12:16:54,553 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
-2017-07-12 12:16:54,553 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
-2017-07-12 12:16:54,588 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
-2017-07-12 12:16:54,703 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
-2017-07-12 12:16:54,751 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-1) WFLYDM0111: Keystore /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
-2017-07-12 12:16:54,787 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) WFLYDS0013: Started FileSystemDeploymentService for directory /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/deployments
-2017-07-12 12:16:54,925 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-8) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
-2017-07-12 12:16:54,964 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 60) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-12 12:16:54,965 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 60) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-12 12:16:54,972 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 61) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-12 12:16:54,973 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 61) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-12 12:16:54,981 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-12 12:16:54,982 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-12 12:16:55,015 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
-2017-07-12 12:16:55,095 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBossWS 5.1.5.Final (Apache CXF 3.1.6) 
-2017-07-12 12:16:55,196 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
-2017-07-12 12:16:55,197 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
-2017-07-12 12:16:55,197 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) started in 3196ms - Started 331 of 577 services (393 services are lazy, passive or on-demand)
-2017-07-12 12:16:55,560 INFO  [org.jboss.as.connector.subsystems.datasources] (management-handler-thread - 1) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
-2017-07-12 12:16:55,561 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = mysql
-2017-07-12 12:16:55,647 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) WFLYJCA0001: Bound data source [java:jboss/datasources/MySQLDS]
-2017-07-12 12:16:55,865 INFO  [org.jboss.as.repository] (management-handler-thread - 3) WFLYDR0001: Content added at location /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/data/content/c6/c97da2eccd88771b98e75890d229ab5a2987b7/content
-2017-07-12 12:16:55,882 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
-2017-07-12 12:16:56,423 INFO  [org.jboss.as.jpa] (MSC service thread 1-7) WFLYJPA0002: Read persistence.xml for sample
-2017-07-12 12:16:56,552 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 7) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'ROOT.war#sample'
-2017-07-12 12:16:56,758 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 7) HHH000204: Processing PersistenceUnitInfo [
+2017-07-12 12:26:33,055 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Standalone] -Dorg.jboss.boot.log.file=/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/log/server.log -Dlogging.configuration=file:/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/configuration/logging.properties 
+2017-07-12 12:26:33,836 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-07-12 12:26:33,851 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.4.0.Final
+2017-07-12 12:26:33,856 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.4.0.Final
+2017-07-12 12:26:33,880 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 4.0.21.Final
+2017-07-12 12:26:33,883 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+2017-07-12 12:26:33,888 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2017-07-12 12:26:33,901 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2017-07-12 12:26:33,912 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2017-07-12 12:26:33,936 INFO  [org.jboss.as.connector] (MSC service thread 1-8) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.4.Final)
+2017-07-12 12:26:33,939 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = h2
+2017-07-12 12:26:34,051 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2017-07-12 12:26:34,054 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2017-07-12 12:26:34,054 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2017-07-12 12:26:34,055 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2017-07-12 12:26:34,082 INFO  [org.jboss.as.security] (MSC service thread 1-2) WFLYSEC0001: Current PicketBox version=4.9.6.Final
+2017-07-12 12:26:34,083 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-8) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2017-07-12 12:26:34,093 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2017-07-12 12:26:34,099 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0003: Undertow 1.4.0.Final starting
+2017-07-12 12:26:34,184 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+2017-07-12 12:26:34,186 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+2017-07-12 12:26:34,197 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path '/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2017-07-12 12:26:34,231 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0012: Started server default-server.
+2017-07-12 12:26:34,232 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0018: Host default-host starting
+2017-07-12 12:26:34,283 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2017-07-12 12:26:34,346 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-1) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2017-07-12 12:26:34,412 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-7) WFLYDM0111: Keystore /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2017-07-12 12:26:34,437 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-5) WFLYDS0013: Started FileSystemDeploymentService for directory /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/deployments
+2017-07-12 12:26:34,584 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-2) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
+2017-07-12 12:26:34,617 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 61) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:26:34,619 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 59) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:26:34,619 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 61) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:26:34,620 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2017-07-12 12:26:34,620 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 59) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:26:34,620 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:26:34,624 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:26:34,693 INFO  [org.jboss.ws.common.management] (MSC service thread 1-8) JBWS022052: Starting JBossWS 5.1.5.Final (Apache CXF 3.1.6) 
+2017-07-12 12:26:34,782 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2017-07-12 12:26:34,783 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2017-07-12 12:26:34,783 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) started in 2294ms - Started 331 of 577 services (393 services are lazy, passive or on-demand)
+2017-07-12 12:26:35,080 INFO  [org.jboss.as.connector.subsystems.datasources] (management-handler-thread - 1) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
+2017-07-12 12:26:35,081 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = mysql
+2017-07-12 12:26:35,162 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/MySQLDS]
+2017-07-12 12:26:35,380 INFO  [org.jboss.as.repository] (management-handler-thread - 3) WFLYDR0001: Content added at location /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/data/content/d6/a59f6f6e19b23d6cb3313ea1e8077cc1063926/content
+2017-07-12 12:26:35,398 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
+2017-07-12 12:26:36,029 INFO  [org.jboss.as.jpa] (MSC service thread 1-5) WFLYJPA0002: Read persistence.xml for sample
+2017-07-12 12:26:36,097 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 2) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'ROOT.war#sample'
+2017-07-12 12:26:36,119 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 2) HHH000204: Processing PersistenceUnitInfo [
 	name: sample
 	...]
-2017-07-12 12:16:56,794 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment ROOT.war
-2017-07-12 12:16:56,826 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 7) HHH000412: Hibernate Core {5.0.10.Final}
-2017-07-12 12:16:56,828 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 7) HHH000206: hibernate.properties not found
-2017-07-12 12:16:56,830 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 7) HHH000021: Bytecode provider name : javassist
-2017-07-12 12:16:56,862 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-1) HV000001: Hibernate Validator 5.2.4.Final
-2017-07-12 12:16:56,870 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 7) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2017-07-12 12:16:56,939 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'BudgetEntryDao' in deployment unit 'deployment "ROOT.war"' are as follows:
+2017-07-12 12:26:36,156 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment ROOT.war
+2017-07-12 12:26:36,182 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 2) HHH000412: Hibernate Core {5.0.10.Final}
+2017-07-12 12:26:36,184 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 2) HHH000206: hibernate.properties not found
+2017-07-12 12:26:36,185 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 2) HHH000021: Bytecode provider name : javassist
+2017-07-12 12:26:36,224 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 2) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-07-12 12:26:36,226 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-1) HV000001: Hibernate Validator 5.2.4.Final
+2017-07-12 12:26:36,301 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'BudgetEntryDao' in deployment unit 'deployment "ROOT.war"' are as follows:
 
 	java:global/ROOT/BudgetEntryDao!com.kree.keehoo.budgetguru.Daos.BudgetEntryDao
 	java:app/ROOT/BudgetEntryDao!com.kree.keehoo.budgetguru.Daos.BudgetEntryDao
@@ -150,7 +150,7 @@
 	java:app/ROOT/BudgetEntryDao
 	java:module/BudgetEntryDao
 
-2017-07-12 12:16:56,939 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'UserDao' in deployment unit 'deployment "ROOT.war"' are as follows:
+2017-07-12 12:26:36,302 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'UserDao' in deployment unit 'deployment "ROOT.war"' are as follows:
 
 	java:global/ROOT/UserDao!com.kree.keehoo.budgetguru.Daos.UserDao
 	java:app/ROOT/UserDao!com.kree.keehoo.budgetguru.Daos.UserDao
@@ -159,7 +159,7 @@
 	java:app/ROOT/UserDao
 	java:module/UserDao
 
-2017-07-12 12:16:56,940 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'UsersRestService' in deployment unit 'deployment "ROOT.war"' are as follows:
+2017-07-12 12:26:36,302 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'UsersRestService' in deployment unit 'deployment "ROOT.war"' are as follows:
 
 	java:global/ROOT/UsersRestService!com.kree.keehoo.budgetguru.REST.UsersRestService
 	java:app/ROOT/UsersRestService!com.kree.keehoo.budgetguru.REST.UsersRestService
@@ -168,7 +168,7 @@
 	java:app/ROOT/UsersRestService
 	java:module/UsersRestService
 
-2017-07-12 12:16:56,940 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'BudgetEntryService' in deployment unit 'deployment "ROOT.war"' are as follows:
+2017-07-12 12:26:36,302 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'BudgetEntryService' in deployment unit 'deployment "ROOT.war"' are as follows:
 
 	java:global/ROOT/BudgetEntryService!com.kree.keehoo.budgetguru.REST.BudgetEntryService
 	java:app/ROOT/BudgetEntryService!com.kree.keehoo.budgetguru.REST.BudgetEntryService
@@ -177,122 +177,214 @@
 	java:app/ROOT/BudgetEntryService
 	java:module/BudgetEntryService
 
-2017-07-12 12:16:57,115 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 7) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-12 12:16:57,116 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 7) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-12 12:16:57,132 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
-2017-07-12 12:16:57,134 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.fabric.jdbc.FabricMySQLDriver (version 5.1)
-2017-07-12 12:16:57,166 INFO  [org.jboss.weld.Version] (MSC service thread 1-1) WELD-000900: 2.3.5 (Final)
-2017-07-12 12:16:57,199 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = ROOT.war_com.mysql.jdbc.Driver_5_1
-2017-07-12 12:16:57,199 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = ROOT.war_com.mysql.fabric.jdbc.FabricMySQLDriver_5_1
-2017-07-12 12:16:57,351 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 63) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'ROOT.war#sample'
-2017-07-12 12:16:57,444 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 7) WFLYCLINF0002: Started client-mappings cache from ejb container
-2017-07-12 12:16:57,680 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 63) HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2017-07-12 12:16:57,719 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 63) Envers integration enabled? : true
-2017-07-12 12:16:58,148 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000227: Running hbm2ddl schema export
-2017-07-12 12:16:58,154 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,154 INFO  [stdout] (ServerService Thread Pool -- 63)     alter table BudgetEntry 
-2017-07-12 12:16:58,155 INFO  [stdout] (ServerService Thread Pool -- 63)         drop 
-2017-07-12 12:16:58,155 INFO  [stdout] (ServerService Thread Pool -- 63)         foreign key FK5b5tdn6lwkr9smy2odq31b607
-2017-07-12 12:16:58,163 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000389: Unsuccessful: alter table BudgetEntry drop foreign key FK5b5tdn6lwkr9smy2odq31b607
-2017-07-12 12:16:58,164 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) Table 'budget.BudgetEntry' doesn't exist
-2017-07-12 12:16:58,164 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,164 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists BudgetEntry
-2017-07-12 12:16:58,165 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,166 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists hibernate_sequence
-2017-07-12 12:16:58,167 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,167 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists User
-2017-07-12 12:16:58,167 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)     create table BudgetEntry (
-2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         id bigint not null,
-2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         cost bit not null,
-2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         value decimal(19,2),
-2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         user_id bigint,
-2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         primary key (id)
-2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)     )
-2017-07-12 12:16:58,181 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,182 INFO  [stdout] (ServerService Thread Pool -- 63)     create table hibernate_sequence (
-2017-07-12 12:16:58,182 INFO  [stdout] (ServerService Thread Pool -- 63)         next_val bigint
-2017-07-12 12:16:58,182 INFO  [stdout] (ServerService Thread Pool -- 63)     )
-2017-07-12 12:16:58,209 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,209 INFO  [stdout] (ServerService Thread Pool -- 63)     insert into hibernate_sequence values ( 1 )
-2017-07-12 12:16:58,211 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,211 INFO  [stdout] (ServerService Thread Pool -- 63)     insert into hibernate_sequence values ( 1 )
-2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)     create table User (
-2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         id bigint not null,
-2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         email varchar(255),
-2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         lastName varchar(255),
-2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         login varchar(255),
-2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         name varchar(255),
-2017-07-12 12:16:58,215 INFO  [stdout] (ServerService Thread Pool -- 63)         password varchar(255),
-2017-07-12 12:16:58,215 INFO  [stdout] (ServerService Thread Pool -- 63)         primary key (id)
-2017-07-12 12:16:58,215 INFO  [stdout] (ServerService Thread Pool -- 63)     )
-2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
-2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63)     alter table BudgetEntry 
-2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63)         add constraint FK5b5tdn6lwkr9smy2odq31b607 
-2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63)         foreign key (user_id) 
-2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63)         references User (id)
-2017-07-12 12:16:58,254 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000230: Schema export complete
-2017-07-12 12:16:58,259 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 63) HHH000397: Using ASTQueryTranslatorFactory
-2017-07-12 12:16:59,299 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 4) RESTEASY002225: Deploying javax.ws.rs.core.Application: class com.kree.keehoo.budgetguru.REST.RestApp
-2017-07-12 12:16:59,334 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 4) WFLYUT0021: Registered web context: /
-2017-07-12 12:16:59,349 INFO  [org.jboss.as.server] (management-handler-thread - 3) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1) Hibernate: 
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)     select
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.id as id1_1_,
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.email as email2_1_,
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.lastName as lastName3_1_,
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.login as login4_1_,
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.name as name5_1_,
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.password as password6_1_ 
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)     from
-2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         User user0_
-2017-07-12 12:17:32,443 INFO  [stdout] (default task-1) Returning empty users list
-2017-07-12 12:17:32,454 INFO  [stdout] (default task-1) Hibernate: 
-2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)     select
-2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)         next_val as id_val 
-2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)     from
-2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)         hibernate_sequence for update
-2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)             
-2017-07-12 12:17:32,455 INFO  [stdout] (default task-1) Hibernate: 
-2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)     update
-2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)         hibernate_sequence 
-2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)     set
-2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)         next_val= ? 
-2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)     where
-2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)         next_val=?
-2017-07-12 12:17:32,488 INFO  [stdout] (default task-1) Hibernate: 
-2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)     insert 
-2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)     into
-2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)         User
-2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)         (email, lastName, login, name, password, id) 
-2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)     values
-2017-07-12 12:17:32,489 INFO  [stdout] (default task-1)         (?, ?, ?, ?, ?, ?)
-2017-07-12 12:17:32,498 INFO  [stdout] (default task-1) Hibernate: 
-2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)     select
-2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         budgetentr0_.id as id1_0_,
-2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         budgetentr0_.cost as cost2_0_,
-2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         budgetentr0_.value as value3_0_,
-2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         budgetentr0_.user_id as user_id4_0_ 
-2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)     from
-2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         BudgetEntry budgetentr0_
-2017-07-12 12:17:32,500 INFO  [stdout] (default task-1) Hibernate: 
-2017-07-12 12:17:32,500 INFO  [stdout] (default task-1)     select
-2017-07-12 12:17:32,500 INFO  [stdout] (default task-1)         next_val as id_val 
-2017-07-12 12:17:32,500 INFO  [stdout] (default task-1)     from
-2017-07-12 12:17:32,501 INFO  [stdout] (default task-1)         hibernate_sequence for update
-2017-07-12 12:17:32,501 INFO  [stdout] (default task-1)             
-2017-07-12 12:17:32,502 INFO  [stdout] (default task-1) Hibernate: 
-2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)     update
-2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)         hibernate_sequence 
-2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)     set
-2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)         next_val= ? 
-2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)     where
-2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)         next_val=?
-2017-07-12 12:17:32,508 INFO  [stdout] (default task-1) Hibernate: 
-2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)     insert 
-2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)     into
-2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)         BudgetEntry
-2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)         (cost, value, user_id, id) 
-2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)     values
-2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)         (?, ?, ?, ?)
+2017-07-12 12:26:36,454 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:26:36,455 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 2) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:26:36,473 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
+2017-07-12 12:26:36,474 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.fabric.jdbc.FabricMySQLDriver (version 5.1)
+2017-07-12 12:26:36,507 INFO  [org.jboss.weld.Version] (MSC service thread 1-2) WELD-000900: 2.3.5 (Final)
+2017-07-12 12:26:36,549 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = ROOT.war_com.mysql.fabric.jdbc.FabricMySQLDriver_5_1
+2017-07-12 12:26:36,551 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0018: Started Driver service with driver-name = ROOT.war_com.mysql.jdbc.Driver_5_1
+2017-07-12 12:26:36,723 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 63) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'ROOT.war#sample'
+2017-07-12 12:26:36,757 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 2) WFLYCLINF0002: Started client-mappings cache from ejb container
+2017-07-12 12:26:36,989 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 63) HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-07-12 12:26:37,018 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 63) Envers integration enabled? : true
+2017-07-12 12:26:37,377 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000227: Running hbm2ddl schema export
+2017-07-12 12:26:37,381 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,381 INFO  [stdout] (ServerService Thread Pool -- 63)     alter table BudgetEntry 
+2017-07-12 12:26:37,382 INFO  [stdout] (ServerService Thread Pool -- 63)         drop 
+2017-07-12 12:26:37,382 INFO  [stdout] (ServerService Thread Pool -- 63)         foreign key FK5b5tdn6lwkr9smy2odq31b607
+2017-07-12 12:26:37,390 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000389: Unsuccessful: alter table BudgetEntry drop foreign key FK5b5tdn6lwkr9smy2odq31b607
+2017-07-12 12:26:37,390 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) Table 'budget.BudgetEntry' doesn't exist
+2017-07-12 12:26:37,390 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,390 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists BudgetEntry
+2017-07-12 12:26:37,391 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,392 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists hibernate_sequence
+2017-07-12 12:26:37,392 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,393 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists User
+2017-07-12 12:26:37,393 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,393 INFO  [stdout] (ServerService Thread Pool -- 63)     create table BudgetEntry (
+2017-07-12 12:26:37,394 INFO  [stdout] (ServerService Thread Pool -- 63)         id bigint not null,
+2017-07-12 12:26:37,394 INFO  [stdout] (ServerService Thread Pool -- 63)         cost bit not null,
+2017-07-12 12:26:37,394 INFO  [stdout] (ServerService Thread Pool -- 63)         value decimal(19,2),
+2017-07-12 12:26:37,394 INFO  [stdout] (ServerService Thread Pool -- 63)         user_id bigint,
+2017-07-12 12:26:37,394 INFO  [stdout] (ServerService Thread Pool -- 63)         primary key (id)
+2017-07-12 12:26:37,394 INFO  [stdout] (ServerService Thread Pool -- 63)     )
+2017-07-12 12:26:37,407 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,407 INFO  [stdout] (ServerService Thread Pool -- 63)     create table hibernate_sequence (
+2017-07-12 12:26:37,407 INFO  [stdout] (ServerService Thread Pool -- 63)         next_val bigint
+2017-07-12 12:26:37,407 INFO  [stdout] (ServerService Thread Pool -- 63)     )
+2017-07-12 12:26:37,419 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,419 INFO  [stdout] (ServerService Thread Pool -- 63)     insert into hibernate_sequence values ( 1 )
+2017-07-12 12:26:37,421 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,422 INFO  [stdout] (ServerService Thread Pool -- 63)     insert into hibernate_sequence values ( 1 )
+2017-07-12 12:26:37,423 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,423 INFO  [stdout] (ServerService Thread Pool -- 63)     create table User (
+2017-07-12 12:26:37,423 INFO  [stdout] (ServerService Thread Pool -- 63)         id bigint not null,
+2017-07-12 12:26:37,423 INFO  [stdout] (ServerService Thread Pool -- 63)         email varchar(255),
+2017-07-12 12:26:37,423 INFO  [stdout] (ServerService Thread Pool -- 63)         lastName varchar(255),
+2017-07-12 12:26:37,423 INFO  [stdout] (ServerService Thread Pool -- 63)         login varchar(255),
+2017-07-12 12:26:37,424 INFO  [stdout] (ServerService Thread Pool -- 63)         name varchar(255),
+2017-07-12 12:26:37,424 INFO  [stdout] (ServerService Thread Pool -- 63)         password varchar(255),
+2017-07-12 12:26:37,424 INFO  [stdout] (ServerService Thread Pool -- 63)         primary key (id)
+2017-07-12 12:26:37,424 INFO  [stdout] (ServerService Thread Pool -- 63)     )
+2017-07-12 12:26:37,437 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:26:37,437 INFO  [stdout] (ServerService Thread Pool -- 63)     alter table BudgetEntry 
+2017-07-12 12:26:37,437 INFO  [stdout] (ServerService Thread Pool -- 63)         add constraint FK5b5tdn6lwkr9smy2odq31b607 
+2017-07-12 12:26:37,437 INFO  [stdout] (ServerService Thread Pool -- 63)         foreign key (user_id) 
+2017-07-12 12:26:37,437 INFO  [stdout] (ServerService Thread Pool -- 63)         references User (id)
+2017-07-12 12:26:37,463 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000230: Schema export complete
+2017-07-12 12:26:37,467 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 63) HHH000397: Using ASTQueryTranslatorFactory
+2017-07-12 12:26:38,368 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 19) RESTEASY002225: Deploying javax.ws.rs.core.Application: class com.kree.keehoo.budgetguru.REST.RestApp
+2017-07-12 12:26:38,396 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 19) WFLYUT0021: Registered web context: /
+2017-07-12 12:26:38,408 INFO  [org.jboss.as.server] (management-handler-thread - 3) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
+2017-07-12 12:26:43,413 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,413 INFO  [stdout] (default task-1)     select
+2017-07-12 12:26:43,413 INFO  [stdout] (default task-1)         user0_.id as id1_1_,
+2017-07-12 12:26:43,413 INFO  [stdout] (default task-1)         user0_.email as email2_1_,
+2017-07-12 12:26:43,413 INFO  [stdout] (default task-1)         user0_.lastName as lastName3_1_,
+2017-07-12 12:26:43,414 INFO  [stdout] (default task-1)         user0_.login as login4_1_,
+2017-07-12 12:26:43,414 INFO  [stdout] (default task-1)         user0_.name as name5_1_,
+2017-07-12 12:26:43,414 INFO  [stdout] (default task-1)         user0_.password as password6_1_ 
+2017-07-12 12:26:43,414 INFO  [stdout] (default task-1)     from
+2017-07-12 12:26:43,414 INFO  [stdout] (default task-1)         User user0_
+2017-07-12 12:26:43,492 INFO  [stdout] (default task-1) Returning empty users list
+2017-07-12 12:26:43,504 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,504 INFO  [stdout] (default task-1)     select
+2017-07-12 12:26:43,504 INFO  [stdout] (default task-1)         next_val as id_val 
+2017-07-12 12:26:43,505 INFO  [stdout] (default task-1)     from
+2017-07-12 12:26:43,505 INFO  [stdout] (default task-1)         hibernate_sequence for update
+2017-07-12 12:26:43,505 INFO  [stdout] (default task-1)             
+2017-07-12 12:26:43,506 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,506 INFO  [stdout] (default task-1)     update
+2017-07-12 12:26:43,506 INFO  [stdout] (default task-1)         hibernate_sequence 
+2017-07-12 12:26:43,506 INFO  [stdout] (default task-1)     set
+2017-07-12 12:26:43,506 INFO  [stdout] (default task-1)         next_val= ? 
+2017-07-12 12:26:43,506 INFO  [stdout] (default task-1)     where
+2017-07-12 12:26:43,506 INFO  [stdout] (default task-1)         next_val=?
+2017-07-12 12:26:43,663 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,663 INFO  [stdout] (default task-1)     insert 
+2017-07-12 12:26:43,663 INFO  [stdout] (default task-1)     into
+2017-07-12 12:26:43,663 INFO  [stdout] (default task-1)         User
+2017-07-12 12:26:43,663 INFO  [stdout] (default task-1)         (email, lastName, login, name, password, id) 
+2017-07-12 12:26:43,663 INFO  [stdout] (default task-1)     values
+2017-07-12 12:26:43,664 INFO  [stdout] (default task-1)         (?, ?, ?, ?, ?, ?)
+2017-07-12 12:26:43,677 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,677 INFO  [stdout] (default task-1)     select
+2017-07-12 12:26:43,677 INFO  [stdout] (default task-1)         user0_.id as id1_1_,
+2017-07-12 12:26:43,677 INFO  [stdout] (default task-1)         user0_.email as email2_1_,
+2017-07-12 12:26:43,677 INFO  [stdout] (default task-1)         user0_.lastName as lastName3_1_,
+2017-07-12 12:26:43,677 INFO  [stdout] (default task-1)         user0_.login as login4_1_,
+2017-07-12 12:26:43,677 INFO  [stdout] (default task-1)         user0_.name as name5_1_,
+2017-07-12 12:26:43,677 INFO  [stdout] (default task-1)         user0_.password as password6_1_ 
+2017-07-12 12:26:43,678 INFO  [stdout] (default task-1)     from
+2017-07-12 12:26:43,678 INFO  [stdout] (default task-1)         User user0_ 
+2017-07-12 12:26:43,678 INFO  [stdout] (default task-1)     where
+2017-07-12 12:26:43,678 INFO  [stdout] (default task-1)         user0_.login=?
+2017-07-12 12:26:43,686 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,686 INFO  [stdout] (default task-1)     select
+2017-07-12 12:26:43,686 INFO  [stdout] (default task-1)         budgetentr0_.id as id1_0_,
+2017-07-12 12:26:43,686 INFO  [stdout] (default task-1)         budgetentr0_.cost as cost2_0_,
+2017-07-12 12:26:43,686 INFO  [stdout] (default task-1)         budgetentr0_.value as value3_0_,
+2017-07-12 12:26:43,686 INFO  [stdout] (default task-1)         budgetentr0_.user_id as user_id4_0_ 
+2017-07-12 12:26:43,686 INFO  [stdout] (default task-1)     from
+2017-07-12 12:26:43,686 INFO  [stdout] (default task-1)         BudgetEntry budgetentr0_
+2017-07-12 12:26:43,689 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,689 INFO  [stdout] (default task-1)     select
+2017-07-12 12:26:43,689 INFO  [stdout] (default task-1)         next_val as id_val 
+2017-07-12 12:26:43,689 INFO  [stdout] (default task-1)     from
+2017-07-12 12:26:43,689 INFO  [stdout] (default task-1)         hibernate_sequence for update
+2017-07-12 12:26:43,690 INFO  [stdout] (default task-1)             
+2017-07-12 12:26:43,691 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,692 INFO  [stdout] (default task-1)     update
+2017-07-12 12:26:43,692 INFO  [stdout] (default task-1)         hibernate_sequence 
+2017-07-12 12:26:43,692 INFO  [stdout] (default task-1)     set
+2017-07-12 12:26:43,692 INFO  [stdout] (default task-1)         next_val= ? 
+2017-07-12 12:26:43,692 INFO  [stdout] (default task-1)     where
+2017-07-12 12:26:43,692 INFO  [stdout] (default task-1)         next_val=?
+2017-07-12 12:26:43,698 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,698 INFO  [stdout] (default task-1)     insert 
+2017-07-12 12:26:43,698 INFO  [stdout] (default task-1)     into
+2017-07-12 12:26:43,698 INFO  [stdout] (default task-1)         BudgetEntry
+2017-07-12 12:26:43,698 INFO  [stdout] (default task-1)         (cost, value, user_id, id) 
+2017-07-12 12:26:43,698 INFO  [stdout] (default task-1)     values
+2017-07-12 12:26:43,698 INFO  [stdout] (default task-1)         (?, ?, ?, ?)
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)     select
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)         budgetentr0_.id as id1_0_1_,
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)         budgetentr0_.cost as cost2_0_1_,
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)         budgetentr0_.value as value3_0_1_,
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)         budgetentr0_.user_id as user_id4_0_1_,
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)         user1_.id as id1_1_0_,
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)         user1_.email as email2_1_0_,
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)         user1_.lastName as lastName3_1_0_,
+2017-07-12 12:26:43,706 INFO  [stdout] (default task-1)         user1_.login as login4_1_0_,
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)         user1_.name as name5_1_0_,
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)         user1_.password as password6_1_0_ 
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)     from
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)         BudgetEntry budgetentr0_ 
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)     left outer join
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)         User user1_ 
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)             on budgetentr0_.user_id=user1_.id 
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)     where
+2017-07-12 12:26:43,707 INFO  [stdout] (default task-1)         budgetentr0_.id=?
+2017-07-12 12:26:43,710 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)     select
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         user0_.id as id1_1_1_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         user0_.email as email2_1_1_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         user0_.lastName as lastName3_1_1_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         user0_.login as login4_1_1_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         user0_.name as name5_1_1_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         user0_.password as password6_1_1_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         budgetentr1_.user_id as user_id4_0_3_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         budgetentr1_.id as id1_0_3_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         budgetentr1_.id as id1_0_0_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         budgetentr1_.cost as cost2_0_0_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         budgetentr1_.value as value3_0_0_,
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         budgetentr1_.user_id as user_id4_0_0_ 
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)     from
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         User user0_ 
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)     left outer join
+2017-07-12 12:26:43,711 INFO  [stdout] (default task-1)         BudgetEntry budgetentr1_ 
+2017-07-12 12:26:43,712 INFO  [stdout] (default task-1)             on user0_.id=budgetentr1_.user_id 
+2017-07-12 12:26:43,712 INFO  [stdout] (default task-1)     where
+2017-07-12 12:26:43,712 INFO  [stdout] (default task-1)         user0_.id=?
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1)     update
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1)         BudgetEntry 
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1)     set
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1)         cost=?,
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1)         value=?,
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1)         user_id=? 
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1)     where
+2017-07-12 12:26:43,717 INFO  [stdout] (default task-1)         id=?
+2017-07-12 12:27:38,158 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested via an OS signal
+2017-07-12 12:27:38,170 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0019: Stopped Driver service with driver-name = ROOT.war_com.mysql.fabric.jdbc.FabricMySQLDriver_5_1
+2017-07-12 12:27:38,171 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0019: Stopped Driver service with driver-name = ROOT.war_com.mysql.jdbc.Driver_5_1
+2017-07-12 12:27:38,188 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 67) WFLYUT0022: Unregistered web context: /
+2017-07-12 12:27:38,206 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0019: Host default-host stopping
+2017-07-12 12:27:38,233 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2017-07-12 12:27:38,234 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 68) WFLYJPA0011: Stopping Persistence Unit (phase 2 of 2) Service 'ROOT.war#sample'
+2017-07-12 12:27:38,234 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 68) HHH000227: Running hbm2ddl schema export
+2017-07-12 12:27:38,235 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2017-07-12 12:27:38,237 INFO  [stdout] (ServerService Thread Pool -- 68) Hibernate: 
+2017-07-12 12:27:38,238 INFO  [stdout] (ServerService Thread Pool -- 68)     alter table BudgetEntry 
+2017-07-12 12:27:38,238 INFO  [stdout] (ServerService Thread Pool -- 68)         drop 
+2017-07-12 12:27:38,238 INFO  [stdout] (ServerService Thread Pool -- 68)         foreign key FK5b5tdn6lwkr9smy2odq31b607
+2017-07-12 12:27:38,244 INFO  [stdout] (ServerService Thread Pool -- 68) Hibernate: 
+2017-07-12 12:27:38,244 INFO  [stdout] (ServerService Thread Pool -- 68)     drop table if exists BudgetEntry
+2017-07-12 12:27:38,245 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 67) WFLYCLINF0003: Stopped client-mappings cache from ejb container
+2017-07-12 12:27:38,251 INFO  [stdout] (ServerService Thread Pool -- 68) Hibernate: 
+2017-07-12 12:27:38,251 INFO  [stdout] (ServerService Thread Pool -- 68)     drop table if exists hibernate_sequence
+2017-07-12 12:27:38,258 INFO  [stdout] (ServerService Thread Pool -- 68) Hibernate: 
+2017-07-12 12:27:38,258 INFO  [stdout] (ServerService Thread Pool -- 68)     drop table if exists User
+2017-07-12 12:27:38,263 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 68) HHH000230: Schema export complete
+2017-07-12 12:27:38,266 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 68) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'ROOT.war#sample'
+2017-07-12 12:27:38,267 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) WFLYJCA0010: Unbound data source [java:jboss/datasources/MySQLDS]
+2017-07-12 12:27:38,268 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0008: Undertow HTTP listener default suspending
+2017-07-12 12:27:38,268 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTPS listener https suspending
+2017-07-12 12:27:38,270 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2017-07-12 12:27:38,270 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
+2017-07-12 12:27:38,270 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0004: Undertow 1.4.0.Final stopping
+2017-07-12 12:27:38,275 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0019: Stopped Driver service with driver-name = mysql
+2017-07-12 12:27:38,280 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0028: Stopped deployment ROOT.war (runtime-name: ROOT.war) in 116ms
+2017-07-12 12:27:38,286 INFO  [org.jboss.as] (MSC service thread 1-5) WFLYSRV0050: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) stopped in 116ms
