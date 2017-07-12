@@ -4,7 +4,6 @@ import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
 import com.kree.keehoo.budgetguru.Budget.BudgetItem;
 import com.kree.keehoo.budgetguru.Daos.BudgetEntryDao;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
-import com.kree.keehoo.budgetguru.Session.SessionData;
 import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.inject.Inject;
@@ -16,10 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.util.Calendar;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @WebServlet(urlPatterns = "/")
 public class BudgetAddingServlet extends HttpServlet {
@@ -33,23 +28,31 @@ public class BudgetAddingServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        User user = new User();
-        user.setLastName("LastName");
-        user.setName("Name");
-        user.setEmail("whatevs@gmail.com");
-        user.setPassword("password");
-        userDao.addUser(user);
+        addDummyUser();
 
+        User keehoo = userDao.getUserByLogin("keehoo");
 
         BudgetEntry budgetEntry = new BudgetEntry(new BudgetItem(new BigDecimal(500)));
+
         budgetEntryDao.addBudgetEntry(budgetEntry);
-//
-//        budgetEntry.setUser(user);
+        budgetEntry.setUser(keehoo);
+        budgetEntryDao.updateBudgetEntry(budgetEntry);
 //
 //        budgetEntryDao.updateBudgetEntry(budgetEntry);
 //
 //        //req.setAttribute("user", users);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
         dispatcher.forward(req, resp);
+    }
+
+    private void addDummyUser() {
+        User user = new User();
+        user.setLastName("LastName");
+        user.setName("Name");
+        user.setLogin("keehoo");
+        user.setEmail("whatevs@gmail.com");
+        user.setPassword("password");
+        userDao.addUser(user);
+
     }
 }
