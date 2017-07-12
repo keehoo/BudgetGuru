@@ -3,6 +3,7 @@ package com.kree.keehoo.budgetguru.Budget;
 import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -19,11 +20,23 @@ public class BudgetEntry {
     private Long id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="user_id")
+  //  @JoinColumn(name="user_id")
     private User user;
 
     @Embedded
     private BudgetItem budgetItem;
+
+    public BudgetEntry(BudgetItem budgetItem) {
+        this.budgetItem = budgetItem;
+        boolean isCost;
+        if (budgetItem.getValue().doubleValue() > 0) {
+            isCost = true;
+        } else isCost = false;
+
+    }
+
+    public BudgetEntry() {
+    }
 
     public Long getId() {
         return id;

@@ -1,7 +1,7 @@
-2017-07-10 14:16:27,766 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
-2017-07-10 14:16:27,920 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
-2017-07-10 14:16:27,979 INFO  [org.jboss.as] (MSC service thread 1-7) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
-2017-07-10 14:16:27,980 DEBUG [org.jboss.as.config] (MSC service thread 1-7) Configured system properties:
+2017-07-12 12:16:52,528 INFO  [org.jboss.modules] (main) JBoss Modules version 1.5.2.Final
+2017-07-12 12:16:52,736 INFO  [org.jboss.msc] (main) JBoss MSC version 1.2.6.Final
+2017-07-12 12:16:52,835 INFO  [org.jboss.as] (MSC service thread 1-5) WFLYSRV0049: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) starting
+2017-07-12 12:16:52,837 DEBUG [org.jboss.as.config] (MSC service thread 1-5) Configured system properties:
 	[Standalone] = 
 	awt.toolkit = sun.awt.X11.XToolkit
 	file.encoding = UTF-8
@@ -85,63 +85,63 @@
 	user.language = en
 	user.name = krzysztof
 	user.timezone = Europe/Warsaw
-2017-07-10 14:16:27,981 DEBUG [org.jboss.as.config] (MSC service thread 1-7) VM Arguments: -D[Standalone] -Dorg.jboss.boot.log.file=/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/log/server.log -Dlogging.configuration=file:/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/configuration/logging.properties 
-2017-07-10 14:16:28,864 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
-2017-07-10 14:16:28,878 INFO  [org.xnio] (MSC service thread 1-3) XNIO version 3.4.0.Final
-2017-07-10 14:16:28,885 INFO  [org.xnio.nio] (MSC service thread 1-3) XNIO NIO Implementation Version 3.4.0.Final
-2017-07-10 14:16:28,911 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
-2017-07-10 14:16:28,929 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
-2017-07-10 14:16:28,960 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
-2017-07-10 14:16:28,966 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 4.0.21.Final
-2017-07-10 14:16:28,969 INFO  [org.jboss.as.connector] (MSC service thread 1-7) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.4.Final)
-2017-07-10 14:16:28,972 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
-2017-07-10 14:16:28,986 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
-2017-07-10 14:16:28,989 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
-2017-07-10 14:16:28,992 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-8) WFLYJCA0018: Started Driver service with driver-name = h2
-2017-07-10 14:16:28,993 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
-2017-07-10 14:16:28,999 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
-2017-07-10 14:16:29,014 INFO  [org.jboss.as.security] (MSC service thread 1-3) WFLYSEC0001: Current PicketBox version=4.9.6.Final
-2017-07-10 14:16:29,148 INFO  [org.jboss.as.naming] (MSC service thread 1-3) WFLYNAM0003: Starting Naming Service
-2017-07-10 14:16:29,152 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0003: Undertow 1.4.0.Final starting
-2017-07-10 14:16:29,153 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
-2017-07-10 14:16:29,299 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path '/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
-2017-07-10 14:16:29,305 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0012: Started server default-server.
-2017-07-10 14:16:29,309 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
-2017-07-10 14:16:29,312 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
-2017-07-10 14:16:29,331 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0018: Host default-host starting
-2017-07-10 14:16:29,410 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
-2017-07-10 14:16:29,504 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
-2017-07-10 14:16:29,605 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-5) WFLYDM0111: Keystore /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
-2017-07-10 14:16:29,663 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-8) WFLYDS0013: Started FileSystemDeploymentService for directory /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/deployments
-2017-07-10 14:16:29,751 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-3) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
-2017-07-10 14:16:29,774 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 62) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-10 14:16:29,775 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 62) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-10 14:16:29,775 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-10 14:16:29,779 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-10 14:16:29,780 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 65) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-10 14:16:29,781 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 65) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-10 14:16:29,871 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
-2017-07-10 14:16:29,962 INFO  [org.jboss.ws.common.management] (MSC service thread 1-3) JBWS022052: Starting JBossWS 5.1.5.Final (Apache CXF 3.1.6) 
-2017-07-10 14:16:30,100 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
-2017-07-10 14:16:30,101 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
-2017-07-10 14:16:30,101 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) started in 2658ms - Started 331 of 577 services (393 services are lazy, passive or on-demand)
-2017-07-10 14:16:30,408 INFO  [org.jboss.as.connector.subsystems.datasources] (management-handler-thread - 4) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
-2017-07-10 14:16:30,408 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = mysql
-2017-07-10 14:16:30,488 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0001: Bound data source [java:jboss/datasources/MySQLDS]
-2017-07-10 14:16:30,684 INFO  [org.jboss.as.repository] (management-handler-thread - 2) WFLYDR0001: Content added at location /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/data/content/19/3b0492ee8ff59a84acd653561501bb468254af/content
-2017-07-10 14:16:30,710 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
-2017-07-10 14:16:31,436 INFO  [org.jboss.as.jpa] (MSC service thread 1-1) WFLYJPA0002: Read persistence.xml for sample
-2017-07-10 14:16:31,511 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 10) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'ROOT.war#sample'
-2017-07-10 14:16:31,540 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 10) HHH000204: Processing PersistenceUnitInfo [
+2017-07-12 12:16:52,837 DEBUG [org.jboss.as.config] (MSC service thread 1-5) VM Arguments: -D[Standalone] -Dorg.jboss.boot.log.file=/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/log/server.log -Dlogging.configuration=file:/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/configuration/logging.properties 
+2017-07-12 12:16:54,076 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2017-07-12 12:16:54,091 INFO  [org.xnio] (MSC service thread 1-7) XNIO version 3.4.0.Final
+2017-07-12 12:16:54,098 INFO  [org.xnio.nio] (MSC service thread 1-7) XNIO NIO Implementation Version 3.4.0.Final
+2017-07-12 12:16:54,118 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 38) WFLYCLINF0001: Activating Infinispan subsystem.
+2017-07-12 12:16:54,138 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 37) WFLYIO001: Worker 'default' has auto-configured to 16 core threads with 128 task threads based on your 8 available processors
+2017-07-12 12:16:54,178 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 54) WFLYTX0013: Node identifier property is set to the default value. Please make sure it is unique.
+2017-07-12 12:16:54,182 INFO  [org.jboss.as.connector] (MSC service thread 1-3) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.3.4.Final)
+2017-07-12 12:16:54,186 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 46) WFLYNAM0001: Activating Naming Subsystem
+2017-07-12 12:16:54,189 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 53) WFLYSEC0002: Activating Security Subsystem
+2017-07-12 12:16:54,192 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 4.0.21.Final
+2017-07-12 12:16:54,196 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 44) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2017-07-12 12:16:54,202 INFO  [org.jboss.as.security] (MSC service thread 1-4) WFLYSEC0001: Current PicketBox version=4.9.6.Final
+2017-07-12 12:16:54,204 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 56) WFLYWS0002: Activating WebServices Extension
+2017-07-12 12:16:54,224 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 33) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+2017-07-12 12:16:54,227 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = h2
+2017-07-12 12:16:54,369 INFO  [org.jboss.as.naming] (MSC service thread 1-6) WFLYNAM0003: Starting Naming Service
+2017-07-12 12:16:54,369 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2017-07-12 12:16:54,399 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0003: Undertow 1.4.0.Final starting
+2017-07-12 12:16:54,516 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 55) WFLYUT0014: Creating file handler for path '/home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2017-07-12 12:16:54,521 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0012: Started server default-server.
+2017-07-12 12:16:54,528 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-5) WFLYUT0018: Host default-host starting
+2017-07-12 12:16:54,553 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 128 (per class), which is derived from thread worker pool sizing.
+2017-07-12 12:16:54,553 INFO  [org.jboss.as.ejb3] (MSC service thread 1-4) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 32 (per class), which is derived from the number of CPUs on this host.
+2017-07-12 12:16:54,588 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:8080
+2017-07-12 12:16:54,703 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2017-07-12 12:16:54,751 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-1) WFLYDM0111: Keystore /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2017-07-12 12:16:54,787 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-2) WFLYDS0013: Started FileSystemDeploymentService for directory /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/deployments
+2017-07-12 12:16:54,925 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-8) ISPN000128: Infinispan version: Infinispan 'Chakra' 8.2.4.Final
+2017-07-12 12:16:54,964 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 60) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:16:54,965 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 60) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:16:54,972 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 61) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:16:54,973 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 61) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:16:54,981 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:16:54,982 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 63) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:16:55,015 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2017-07-12 12:16:55,095 INFO  [org.jboss.ws.common.management] (MSC service thread 1-1) JBWS022052: Starting JBossWS 5.1.5.Final (Apache CXF 3.1.6) 
+2017-07-12 12:16:55,196 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2017-07-12 12:16:55,197 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2017-07-12 12:16:55,197 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) started in 3196ms - Started 331 of 577 services (393 services are lazy, passive or on-demand)
+2017-07-12 12:16:55,560 INFO  [org.jboss.as.connector.subsystems.datasources] (management-handler-thread - 1) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
+2017-07-12 12:16:55,561 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0018: Started Driver service with driver-name = mysql
+2017-07-12 12:16:55,647 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-4) WFLYJCA0001: Bound data source [java:jboss/datasources/MySQLDS]
+2017-07-12 12:16:55,865 INFO  [org.jboss.as.repository] (management-handler-thread - 3) WFLYDR0001: Content added at location /home/krzysztof/Workspaces/BudgetGuru/target/wildfly-run/wildfly-10.1.0.Final/standalone/data/content/c6/c97da2eccd88771b98e75890d229ab5a2987b7/content
+2017-07-12 12:16:55,882 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-8) WFLYSRV0027: Starting deployment of "ROOT.war" (runtime-name: "ROOT.war")
+2017-07-12 12:16:56,423 INFO  [org.jboss.as.jpa] (MSC service thread 1-7) WFLYJPA0002: Read persistence.xml for sample
+2017-07-12 12:16:56,552 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 7) WFLYJPA0010: Starting Persistence Unit (phase 1 of 2) Service 'ROOT.war#sample'
+2017-07-12 12:16:56,758 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 7) HHH000204: Processing PersistenceUnitInfo [
 	name: sample
 	...]
-2017-07-10 14:16:31,581 INFO  [org.jboss.weld.deployer] (MSC service thread 1-8) WFLYWELD0003: Processing weld deployment ROOT.war
-2017-07-10 14:16:31,628 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 10) HHH000412: Hibernate Core {5.0.10.Final}
-2017-07-10 14:16:31,631 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 10) HHH000206: hibernate.properties not found
-2017-07-10 14:16:31,633 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 10) HHH000021: Bytecode provider name : javassist
-2017-07-10 14:16:31,657 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-8) HV000001: Hibernate Validator 5.2.4.Final
-2017-07-10 14:16:31,677 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 10) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-2017-07-10 14:16:31,745 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-8) WFLYEJB0473: JNDI bindings for session bean named 'BudgetEntryDao' in deployment unit 'deployment "ROOT.war"' are as follows:
+2017-07-12 12:16:56,794 INFO  [org.jboss.weld.deployer] (MSC service thread 1-1) WFLYWELD0003: Processing weld deployment ROOT.war
+2017-07-12 12:16:56,826 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 7) HHH000412: Hibernate Core {5.0.10.Final}
+2017-07-12 12:16:56,828 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 7) HHH000206: hibernate.properties not found
+2017-07-12 12:16:56,830 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 7) HHH000021: Bytecode provider name : javassist
+2017-07-12 12:16:56,862 INFO  [org.hibernate.validator.internal.util.Version] (MSC service thread 1-1) HV000001: Hibernate Validator 5.2.4.Final
+2017-07-12 12:16:56,870 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 7) HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-07-12 12:16:56,939 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'BudgetEntryDao' in deployment unit 'deployment "ROOT.war"' are as follows:
 
 	java:global/ROOT/BudgetEntryDao!com.kree.keehoo.budgetguru.Daos.BudgetEntryDao
 	java:app/ROOT/BudgetEntryDao!com.kree.keehoo.budgetguru.Daos.BudgetEntryDao
@@ -150,7 +150,7 @@
 	java:app/ROOT/BudgetEntryDao
 	java:module/BudgetEntryDao
 
-2017-07-10 14:16:31,745 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-8) WFLYEJB0473: JNDI bindings for session bean named 'UserDao' in deployment unit 'deployment "ROOT.war"' are as follows:
+2017-07-12 12:16:56,939 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'UserDao' in deployment unit 'deployment "ROOT.war"' are as follows:
 
 	java:global/ROOT/UserDao!com.kree.keehoo.budgetguru.Daos.UserDao
 	java:app/ROOT/UserDao!com.kree.keehoo.budgetguru.Daos.UserDao
@@ -159,7 +159,7 @@
 	java:app/ROOT/UserDao
 	java:module/UserDao
 
-2017-07-10 14:16:31,746 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-8) WFLYEJB0473: JNDI bindings for session bean named 'UsersRestService' in deployment unit 'deployment "ROOT.war"' are as follows:
+2017-07-12 12:16:56,940 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'UsersRestService' in deployment unit 'deployment "ROOT.war"' are as follows:
 
 	java:global/ROOT/UsersRestService!com.kree.keehoo.budgetguru.REST.UsersRestService
 	java:app/ROOT/UsersRestService!com.kree.keehoo.budgetguru.REST.UsersRestService
@@ -168,7 +168,7 @@
 	java:app/ROOT/UsersRestService
 	java:module/UsersRestService
 
-2017-07-10 14:16:31,746 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-8) WFLYEJB0473: JNDI bindings for session bean named 'BudgetEntryService' in deployment unit 'deployment "ROOT.war"' are as follows:
+2017-07-12 12:16:56,940 INFO  [org.jboss.as.ejb3.deployment] (MSC service thread 1-1) WFLYEJB0473: JNDI bindings for session bean named 'BudgetEntryService' in deployment unit 'deployment "ROOT.war"' are as follows:
 
 	java:global/ROOT/BudgetEntryService!com.kree.keehoo.budgetguru.REST.BudgetEntryService
 	java:app/ROOT/BudgetEntryService!com.kree.keehoo.budgetguru.REST.BudgetEntryService
@@ -177,159 +177,122 @@
 	java:app/ROOT/BudgetEntryService
 	java:module/BudgetEntryService
 
-2017-07-10 14:16:31,924 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 10) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-10 14:16:31,925 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 10) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
-2017-07-10 14:16:31,951 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
-2017-07-10 14:16:31,952 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.fabric.jdbc.FabricMySQLDriver (version 5.1)
-2017-07-10 14:16:31,992 INFO  [org.jboss.weld.Version] (MSC service thread 1-6) WELD-000900: 2.3.5 (Final)
-2017-07-10 14:16:32,035 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = ROOT.war_com.mysql.jdbc.Driver_5_1
-2017-07-10 14:16:32,038 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = ROOT.war_com.mysql.fabric.jdbc.FabricMySQLDriver_5_1
-2017-07-10 14:16:32,223 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 65) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'ROOT.war#sample'
-2017-07-10 14:16:32,268 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 10) WFLYCLINF0002: Started client-mappings cache from ejb container
-2017-07-10 14:16:32,583 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 65) HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2017-07-10 14:16:32,629 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 65) Envers integration enabled? : true
-2017-07-10 14:16:32,779 ERROR [org.jboss.msc.service.fail] (ServerService Thread Pool -- 65) MSC000001: Failed to start service jboss.persistenceunit."ROOT.war#sample": org.jboss.msc.service.StartException in service jboss.persistenceunit."ROOT.war#sample": org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.kree.keehoo.budgetguru.Budget.BudgetEntry.user in com.kree.keehoo.budgetguru.Users.User.budgetEntries
-	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:179)
-	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:121)
-	at org.wildfly.security.manager.WildFlySecurityManager.doChecked(WildFlySecurityManager.java:667)
-	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1.run(PersistenceUnitServiceImpl.java:193)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:748)
-	at org.jboss.threads.JBossThread.run(JBossThread.java:320)
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.kree.keehoo.budgetguru.Budget.BudgetEntry.user in com.kree.keehoo.budgetguru.Users.User.budgetEntries
-	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:769)
-	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:719)
-	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:54)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1655)
-	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1623)
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:278)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:847)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:874)
-	at org.jboss.as.jpa.hibernate5.TwoPhaseBootstrapImpl.build(TwoPhaseBootstrapImpl.java:44)
-	at org.jboss.as.jpa.service.PersistenceUnitServiceImpl$1$1.run(PersistenceUnitServiceImpl.java:161)
-	... 7 more
-
-2017-07-10 14:16:32,782 ERROR [org.jboss.as.controller.management-operation] (management-handler-thread - 2) WFLYCTL0013: Operation ("add") failed - address: ([("deployment" => "ROOT.war")]) - failure description: {
-    "WFLYCTL0080: Failed services" => {"jboss.persistenceunit.\"ROOT.war#sample\"" => "org.jboss.msc.service.StartException in service jboss.persistenceunit.\"ROOT.war#sample\": org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.kree.keehoo.budgetguru.Budget.BudgetEntry.user in com.kree.keehoo.budgetguru.Users.User.budgetEntries
-    Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.kree.keehoo.budgetguru.Budget.BudgetEntry.user in com.kree.keehoo.budgetguru.Users.User.budgetEntries"},
-    "WFLYCTL0412: Required services that are not installed:" => ["jboss.persistenceunit.\"ROOT.war#sample\""],
-    "WFLYCTL0180: Services with missing/unavailable dependencies" => undefined
-}
-2017-07-10 14:16:32,784 ERROR [org.jboss.as.server] (management-handler-thread - 2) WFLYSRV0021: Deploy of deployment "ROOT.war" was rolled back with the following failure message: 
-{
-    "WFLYCTL0080: Failed services" => {"jboss.persistenceunit.\"ROOT.war#sample\"" => "org.jboss.msc.service.StartException in service jboss.persistenceunit.\"ROOT.war#sample\": org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.kree.keehoo.budgetguru.Budget.BudgetEntry.user in com.kree.keehoo.budgetguru.Users.User.budgetEntries
-    Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: com.kree.keehoo.budgetguru.Budget.BudgetEntry.user in com.kree.keehoo.budgetguru.Users.User.budgetEntries"},
-    "WFLYCTL0412: Required services that are not installed:" => ["jboss.persistenceunit.\"ROOT.war#sample\""],
-    "WFLYCTL0180: Services with missing/unavailable dependencies" => undefined
-}
-2017-07-10 14:16:32,789 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-3) WFLYJCA0019: Stopped Driver service with driver-name = ROOT.war_com.mysql.jdbc.Driver_5_1
-2017-07-10 14:16:32,789 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = ROOT.war_com.mysql.fabric.jdbc.FabricMySQLDriver_5_1
-2017-07-10 14:16:32,789 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 65) WFLYJPA0011: Stopping Persistence Unit (phase 1 of 2) Service 'ROOT.war#sample'
-2017-07-10 14:16:32,832 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0028: Stopped deployment ROOT.war (runtime-name: ROOT.war) in 47ms
-2017-07-10 14:16:32,833 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 65) WFLYCLINF0003: Stopped client-mappings cache from ejb container
-2017-07-10 14:16:32,839 INFO  [org.jboss.as.controller] (management-handler-thread - 2) WFLYCTL0183: Service status report
-WFLYCTL0184:    New missing/unsatisfied dependencies:
-      service jboss.deployment.unit."ROOT.war".WeldBootstrapService (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.WeldInstantiator, service jboss.deployment.unit."ROOT.war".WeldStartService, service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".WeldInstantiator, service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetEntryCreatorServlet".WeldInstantiator, WFLYCTL0208: ... and 16 more ] 
-      service jboss.deployment.unit."ROOT.war".WeldStartService (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.WeldInstantiator, service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".WeldInstantiator, service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetEntryCreatorServlet".WeldInstantiator, service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.WeldInterceptorBindingsService, WFLYCTL0208: ... and 17 more ] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.START] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService, service jboss.deployment.unit."ROOT.war".moduleDeploymentRuntimeInformationStart] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.VIEW."com.kree.keehoo.budgetguru.Daos.BudgetEntryDao".LOCAL (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.START] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.START] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.WeldInterceptorBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.WeldInstantiator] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.ejb.non-functional-timerservice (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.START] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.START] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService, service jboss.deployment.unit."ROOT.war".moduleDeploymentRuntimeInformationStart] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.VIEW."com.kree.keehoo.budgetguru.REST.BudgetEntryService".LOCAL (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.START] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.START] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.WeldInterceptorBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.WeldInstantiator] 
-      service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.ejb.non-functional-timerservice (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.START] 
-      service jboss.deployment.unit."ROOT.war".component.UserDao.CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UserDao.START] 
-      service jboss.deployment.unit."ROOT.war".component.UserDao.JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component.UserDao.START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService, service jboss.deployment.unit."ROOT.war".moduleDeploymentRuntimeInformationStart] 
-      service jboss.deployment.unit."ROOT.war".component.UserDao.VIEW."com.kree.keehoo.budgetguru.Daos.UserDao".LOCAL (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UserDao.START] 
-      service jboss.deployment.unit."ROOT.war".component.UserDao.WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UserDao.START] 
-      service jboss.deployment.unit."ROOT.war".component.UserDao.WeldInterceptorBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UserDao.WeldInstantiator] 
-      service jboss.deployment.unit."ROOT.war".component.UserDao.ejb.non-functional-timerservice (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UserDao.START] 
-      service jboss.deployment.unit."ROOT.war".component.UsersRestService.CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UsersRestService.START] 
-      service jboss.deployment.unit."ROOT.war".component.UsersRestService.JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component.UsersRestService.START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService, service jboss.deployment.unit."ROOT.war".moduleDeploymentRuntimeInformationStart] 
-      service jboss.deployment.unit."ROOT.war".component.UsersRestService.VIEW."com.kree.keehoo.budgetguru.REST.UsersRestService".LOCAL (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UsersRestService.START] 
-      service jboss.deployment.unit."ROOT.war".component.UsersRestService.WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UsersRestService.START] 
-      service jboss.deployment.unit."ROOT.war".component.UsersRestService.WeldInterceptorBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UsersRestService.WeldInstantiator] 
-      service jboss.deployment.unit."ROOT.war".component.UsersRestService.ejb.non-functional-timerservice (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.UsersRestService.START] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".START] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".START] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetEntryCreatorServlet".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetEntryCreatorServlet".START] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetEntryCreatorServlet".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetEntryCreatorServlet".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetEntryCreatorServlet".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetEntryCreatorServlet".START] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.UserAddServlet".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.UserAddServlet".START] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.UserAddServlet".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.UserAddServlet".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.UserAddServlet".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.UserAddServlet".START] 
-      service jboss.deployment.unit."ROOT.war".component."com.sun.faces.config.ConfigureListener".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.sun.faces.config.ConfigureListener".START] 
-      service jboss.deployment.unit."ROOT.war".component."com.sun.faces.config.ConfigureListener".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."com.sun.faces.config.ConfigureListener".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."com.sun.faces.config.ConfigureListener".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.sun.faces.config.ConfigureListener".START] 
-      service jboss.deployment.unit."ROOT.war".component."javax.faces.webapp.FacetTag".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."javax.faces.webapp.FacetTag".START] 
-      service jboss.deployment.unit."ROOT.war".component."javax.faces.webapp.FacetTag".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."javax.faces.webapp.FacetTag".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."javax.faces.webapp.FacetTag".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."javax.faces.webapp.FacetTag".START] 
-      service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV".START] 
-      service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV".START] 
-      service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.ScriptFreeTLV".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.ScriptFreeTLV".START] 
-      service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.ScriptFreeTLV".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.ScriptFreeTLV".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.ScriptFreeTLV".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.ScriptFreeTLV".START] 
-      service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldInitialListener".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldInitialListener".START] 
-      service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldInitialListener".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldInitialListener".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldInitialListener".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldInitialListener".START] 
-      service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldTerminalListener".CREATE (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldTerminalListener".START] 
-      service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldTerminalListener".JndiBindingsService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldTerminalListener".START (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService, service jboss.undertow.deployment.default-server.default-host./ROOT, service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldTerminalListener".WeldInstantiator (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldTerminalListener".START] 
-      service jboss.deployment.unit."ROOT.war".ee.ComponentRegistry (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService] 
-      service jboss.deployment.unit."ROOT.war".jndiDependencyService (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.sun.faces.config.ConfigureListener".START, service jboss.deployment.unit."ROOT.war".component."org.jboss.weld.servlet.WeldTerminalListener".START, service jboss.deployment.unit."ROOT.war".WeldStartService, service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.ScriptFreeTLV".START, WFLYCTL0208: ... and 11 more ] 
-      service jboss.deployment.unit."ROOT.war".moduleDeploymentRuntimeInformation (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.START, service jboss.deployment.unit."ROOT.war".component.UserDao.START, service jboss.deployment.unit."ROOT.war".component.UsersRestService.START, service jboss.deployment.unit."ROOT.war".component.BudgetEntryService.START, WFLYCTL0208: ... and 2 more ] 
-      service jboss.naming.context.java.app.ROOT.env (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.BeanManager (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.DefaultContextService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.DefaultDataSource (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.DefaultManagedExecutorService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.DefaultManagedScheduledExecutorService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.DefaultManagedThreadFactory (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.EJBContext (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.TimerService (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.TransactionSynchronizationRegistry (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.UserTransaction (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.env (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.env."com.kree.keehoo.budgetguru.Daos.BudgetEntryDao".entityManager (missing) dependents: [service jboss.deployment.unit."ROOT.war".component.BudgetEntryDao.START, service jboss.deployment.unit."ROOT.war".jndiDependencyService] 
-      service jboss.naming.context.java.module.ROOT.ROOT.env."com.kree.keehoo.budgetguru.Daos.UserDao".entityManager (missing) dependents: [service jboss.deployment.unit."ROOT.war".jndiDependencyService, service jboss.deployment.unit."ROOT.war".component.UserDao.START] 
-      service jboss.persistenceunit."ROOT.war#sample" (missing) dependents: [service jboss.deployment.unit."ROOT.war".component."com.sun.faces.config.ConfigureListener".START, service jboss.deployment.unit."ROOT.war".WeldStartService, service jboss.deployment.unit."ROOT.war".component."javax.servlet.jsp.jstl.tlv.ScriptFreeTLV".START, service jboss.deployment.unit."ROOT.war".component."com.kree.keehoo.budgetguru.Servlets.BudgetAddingServlet".START, WFLYCTL0208: ... and 14 more ] 
-      service jboss.undertow.deployment.default-server.default-host./ROOT (missing) dependents: [service jboss.deployment.unit."ROOT.war".deploymentCompleteService] 
-      service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT] 
-      service jboss.undertow.deployment.default-server.default-host./ROOT.codec (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService] 
-      service jboss.undertow.deployment.default-server.default-host./ROOT.session (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService] 
-      service org.wildfly.request-controller.control-point."ROOT.war".undertow (missing) dependents: [service jboss.undertow.deployment.default-server.default-host./ROOT.UndertowDeploymentInfoService] 
-WFLYCTL0186:   Services which failed to start:      service jboss.persistenceunit."ROOT.war#sample"
-
-2017-07-10 14:19:56,700 INFO  [org.jboss.as.server] (Thread-2) WFLYSRV0220: Server shutdown has been requested via an OS signal
-2017-07-10 14:19:56,712 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
-2017-07-10 14:19:56,723 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-8) WFLYJCA0010: Unbound data source [java:jboss/datasources/MySQLDS]
-2017-07-10 14:19:56,726 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0008: Undertow HTTPS listener https suspending
-2017-07-10 14:19:56,728 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0019: Host default-host stopping
-2017-07-10 14:19:56,732 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
-2017-07-10 14:19:56,731 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0008: Undertow HTTP listener default suspending
-2017-07-10 14:19:56,734 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:8080
-2017-07-10 14:19:56,735 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0019: Stopped Driver service with driver-name = h2
-2017-07-10 14:19:56,735 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-6) WFLYJCA0019: Stopped Driver service with driver-name = mysql
-2017-07-10 14:19:56,736 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0004: Undertow 1.4.0.Final stopping
-2017-07-10 14:19:56,750 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0050: WildFly Full 10.1.0.Final (WildFly Core 2.2.0.Final) stopped in 43ms
+2017-07-12 12:16:57,115 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 7) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:16:57,116 INFO  [org.infinispan.configuration.cache.EvictionConfigurationBuilder] (ServerService Thread Pool -- 7) ISPN000152: Passivation configured without an eviction policy being selected. Only manually evicted entities will be passivated.
+2017-07-12 12:16:57,132 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.jdbc.Driver (version 5.1)
+2017-07-12 12:16:57,134 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0005: Deploying non-JDBC-compliant driver class com.mysql.fabric.jdbc.FabricMySQLDriver (version 5.1)
+2017-07-12 12:16:57,166 INFO  [org.jboss.weld.Version] (MSC service thread 1-1) WELD-000900: 2.3.5 (Final)
+2017-07-12 12:16:57,199 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0018: Started Driver service with driver-name = ROOT.war_com.mysql.jdbc.Driver_5_1
+2017-07-12 12:16:57,199 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = ROOT.war_com.mysql.fabric.jdbc.FabricMySQLDriver_5_1
+2017-07-12 12:16:57,351 INFO  [org.jboss.as.jpa] (ServerService Thread Pool -- 63) WFLYJPA0010: Starting Persistence Unit (phase 2 of 2) Service 'ROOT.war#sample'
+2017-07-12 12:16:57,444 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 7) WFLYCLINF0002: Started client-mappings cache from ejb container
+2017-07-12 12:16:57,680 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 63) HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-07-12 12:16:57,719 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 63) Envers integration enabled? : true
+2017-07-12 12:16:58,148 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000227: Running hbm2ddl schema export
+2017-07-12 12:16:58,154 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,154 INFO  [stdout] (ServerService Thread Pool -- 63)     alter table BudgetEntry 
+2017-07-12 12:16:58,155 INFO  [stdout] (ServerService Thread Pool -- 63)         drop 
+2017-07-12 12:16:58,155 INFO  [stdout] (ServerService Thread Pool -- 63)         foreign key FK5b5tdn6lwkr9smy2odq31b607
+2017-07-12 12:16:58,163 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000389: Unsuccessful: alter table BudgetEntry drop foreign key FK5b5tdn6lwkr9smy2odq31b607
+2017-07-12 12:16:58,164 ERROR [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) Table 'budget.BudgetEntry' doesn't exist
+2017-07-12 12:16:58,164 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,164 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists BudgetEntry
+2017-07-12 12:16:58,165 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,166 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists hibernate_sequence
+2017-07-12 12:16:58,167 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,167 INFO  [stdout] (ServerService Thread Pool -- 63)     drop table if exists User
+2017-07-12 12:16:58,167 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)     create table BudgetEntry (
+2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         id bigint not null,
+2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         cost bit not null,
+2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         value decimal(19,2),
+2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         user_id bigint,
+2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)         primary key (id)
+2017-07-12 12:16:58,168 INFO  [stdout] (ServerService Thread Pool -- 63)     )
+2017-07-12 12:16:58,181 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,182 INFO  [stdout] (ServerService Thread Pool -- 63)     create table hibernate_sequence (
+2017-07-12 12:16:58,182 INFO  [stdout] (ServerService Thread Pool -- 63)         next_val bigint
+2017-07-12 12:16:58,182 INFO  [stdout] (ServerService Thread Pool -- 63)     )
+2017-07-12 12:16:58,209 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,209 INFO  [stdout] (ServerService Thread Pool -- 63)     insert into hibernate_sequence values ( 1 )
+2017-07-12 12:16:58,211 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,211 INFO  [stdout] (ServerService Thread Pool -- 63)     insert into hibernate_sequence values ( 1 )
+2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)     create table User (
+2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         id bigint not null,
+2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         email varchar(255),
+2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         lastName varchar(255),
+2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         login varchar(255),
+2017-07-12 12:16:58,214 INFO  [stdout] (ServerService Thread Pool -- 63)         name varchar(255),
+2017-07-12 12:16:58,215 INFO  [stdout] (ServerService Thread Pool -- 63)         password varchar(255),
+2017-07-12 12:16:58,215 INFO  [stdout] (ServerService Thread Pool -- 63)         primary key (id)
+2017-07-12 12:16:58,215 INFO  [stdout] (ServerService Thread Pool -- 63)     )
+2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63) Hibernate: 
+2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63)     alter table BudgetEntry 
+2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63)         add constraint FK5b5tdn6lwkr9smy2odq31b607 
+2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63)         foreign key (user_id) 
+2017-07-12 12:16:58,227 INFO  [stdout] (ServerService Thread Pool -- 63)         references User (id)
+2017-07-12 12:16:58,254 INFO  [org.hibernate.tool.hbm2ddl.SchemaExport] (ServerService Thread Pool -- 63) HHH000230: Schema export complete
+2017-07-12 12:16:58,259 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 63) HHH000397: Using ASTQueryTranslatorFactory
+2017-07-12 12:16:59,299 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 4) RESTEASY002225: Deploying javax.ws.rs.core.Application: class com.kree.keehoo.budgetguru.REST.RestApp
+2017-07-12 12:16:59,334 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 4) WFLYUT0021: Registered web context: /
+2017-07-12 12:16:59,349 INFO  [org.jboss.as.server] (management-handler-thread - 3) WFLYSRV0010: Deployed "ROOT.war" (runtime-name : "ROOT.war")
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)     select
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.id as id1_1_,
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.email as email2_1_,
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.lastName as lastName3_1_,
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.login as login4_1_,
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.name as name5_1_,
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         user0_.password as password6_1_ 
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)     from
+2017-07-12 12:17:32,382 INFO  [stdout] (default task-1)         User user0_
+2017-07-12 12:17:32,443 INFO  [stdout] (default task-1) Returning empty users list
+2017-07-12 12:17:32,454 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)     select
+2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)         next_val as id_val 
+2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)     from
+2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)         hibernate_sequence for update
+2017-07-12 12:17:32,454 INFO  [stdout] (default task-1)             
+2017-07-12 12:17:32,455 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)     update
+2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)         hibernate_sequence 
+2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)     set
+2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)         next_val= ? 
+2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)     where
+2017-07-12 12:17:32,455 INFO  [stdout] (default task-1)         next_val=?
+2017-07-12 12:17:32,488 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)     insert 
+2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)     into
+2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)         User
+2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)         (email, lastName, login, name, password, id) 
+2017-07-12 12:17:32,488 INFO  [stdout] (default task-1)     values
+2017-07-12 12:17:32,489 INFO  [stdout] (default task-1)         (?, ?, ?, ?, ?, ?)
+2017-07-12 12:17:32,498 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)     select
+2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         budgetentr0_.id as id1_0_,
+2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         budgetentr0_.cost as cost2_0_,
+2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         budgetentr0_.value as value3_0_,
+2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         budgetentr0_.user_id as user_id4_0_ 
+2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)     from
+2017-07-12 12:17:32,498 INFO  [stdout] (default task-1)         BudgetEntry budgetentr0_
+2017-07-12 12:17:32,500 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:17:32,500 INFO  [stdout] (default task-1)     select
+2017-07-12 12:17:32,500 INFO  [stdout] (default task-1)         next_val as id_val 
+2017-07-12 12:17:32,500 INFO  [stdout] (default task-1)     from
+2017-07-12 12:17:32,501 INFO  [stdout] (default task-1)         hibernate_sequence for update
+2017-07-12 12:17:32,501 INFO  [stdout] (default task-1)             
+2017-07-12 12:17:32,502 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)     update
+2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)         hibernate_sequence 
+2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)     set
+2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)         next_val= ? 
+2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)     where
+2017-07-12 12:17:32,502 INFO  [stdout] (default task-1)         next_val=?
+2017-07-12 12:17:32,508 INFO  [stdout] (default task-1) Hibernate: 
+2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)     insert 
+2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)     into
+2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)         BudgetEntry
+2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)         (cost, value, user_id, id) 
+2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)     values
+2017-07-12 12:17:32,508 INFO  [stdout] (default task-1)         (?, ?, ?, ?)
