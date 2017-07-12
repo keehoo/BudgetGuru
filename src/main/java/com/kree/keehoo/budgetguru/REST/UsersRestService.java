@@ -29,7 +29,7 @@ public class UsersRestService {
         return userDao.getAllUsers();
     }
 
-    @Path("/getUser")
+    @Path("/login")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public User getUserByLogin(@QueryParam("login") String login) {
@@ -38,10 +38,10 @@ public class UsersRestService {
         return userDao.getUserByLogin(login);
     }
 
-    @Path("/getUser")
+    @Path("/user")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public User getUserByLogin(@QueryParam("id") long id) {
+    public User getUserById(@QueryParam("id") long id) {
         System.out.println("Querying db for user " + id);
         //TODO: should add response here.
         return userDao.getUserById(id);

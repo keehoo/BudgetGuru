@@ -14,7 +14,7 @@ import java.util.Set;
         @NamedQuery(name = User.GET_USER,
         query = "select u from User u where u.login = :login"),
         @NamedQuery(name = User.GET_USER_BY_ID,
-                query = "select u from User u where u.id = :id"),
+                query = "select u from User u where u.id = :id")
 })
 public class User {
 
