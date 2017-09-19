@@ -24,9 +24,9 @@
         <!-- mysql -->
         <version.mysql>5.1.37</version.mysql>
         <jdbc.datasource>java:jboss/datasources/MySQLDS</jdbc.datasource>
-        <mysql.connection.url>jdbc:mysql://127.0.0.1:3306/budget??useUnicode=yes&amp;characterEncoding=UTF-8
+        <mysql.connection.url>jdbc:mysql://budgetgutu.000webhostapp.com:3306/id2405508_budget??useUnicode=yes&amp;characterEncoding=UTF-8
         </mysql.connection.url>
-        <mysql.username>keeh</mysql.username>
+        <mysql.username>id2405508_keeh</mysql.username>
         <mysql.password>dupawolowa</mysql.password>
     </properties>
 
