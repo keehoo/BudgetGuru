@@ -149,10 +149,10 @@
                     </security>
                 </datasource>
                 <datasource jndi-name="java:jboss/datasources/MySQLDS" pool-name="MySQLPool">
-                    <connection-url>jdbc:mysql://127.0.0.1:3306/budget??useUnicode=yes&amp;characterEncoding=UTF-8</connection-url>
+                    <connection-url>jdbc:mysql://keehoo.hekko24.pl:3306/keehoo_budget??useUnicode=yes&amp;characterE</connection-url>
                     <driver>mysql</driver>
                     <security>
-                        <user-name>keeh</user-name>
+                        <user-name>keehoo_keeh</user-name>
                         <password>dupawolowa</password>
                     </security>
                 </datasource>
@@ -428,7 +428,7 @@
 
     <deployments>
         <deployment name="ROOT.war" runtime-name="ROOT.war">
-            <content sha1="d6a59f6f6e19b23d6cb3313ea1e8077cc1063926"/>
+            <content sha1="73f569f43ca485afd7678643a62788d28f3d37f2"/>
         </deployment>
     </deployments>
 </server>
