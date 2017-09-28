@@ -19,8 +19,7 @@ public class BudgetEntry {
     @GeneratedValue
     private Long id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    private User user;
+    private long user;
 
     @Embedded
     private BudgetItem budgetItem;
@@ -45,11 +44,11 @@ public class BudgetEntry {
         this.id = id;
     }
 
-    public User getUser() {
+    public long getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(long user) {
         this.user = user;
     }
 

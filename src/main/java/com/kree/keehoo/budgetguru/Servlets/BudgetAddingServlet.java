@@ -33,10 +33,9 @@ public class BudgetAddingServlet extends HttpServlet {
         User keehoo = userDao.getUserByLogin("keehoo");
 
         BudgetEntry budgetEntry = new BudgetEntry(new BudgetItem(new BigDecimal(500)));
-
+        budgetEntry.setUser(userDao.getUserByLogin("keehoo").getId());
         budgetEntryDao.addBudgetEntry(budgetEntry);
-        budgetEntry.setUser(keehoo);
-        budgetEntryDao.updateBudgetEntry(budgetEntry);
+
 //
 //        budgetEntryDao.updateBudgetEntry(budgetEntry);
 //
