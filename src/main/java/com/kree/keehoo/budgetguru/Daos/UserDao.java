@@ -36,19 +36,22 @@ public class UserDao {
         }
     }
 
-    public void addUser(User u) {
+    public int addUser(User u) {
         String login = u.getLogin();
         List<User> users = getAllUsers();
         List<String> logins = new ArrayList<>();
         for (User user : users) {
             logins.add(user.getLogin());
             System.out.println("added " + user.getLogin());
+            //TODO: convert this ugly code to stream
         }
         if (!logins.contains(login)) {
             entityManager.persist(u);
+            return 202;
         } else {
             System.out.println("\n Cannot add user : " + u.toString() + " " +
                     "\n[ERROR] Already a user with login " + login);
+            return 0;
         }
     }
 }

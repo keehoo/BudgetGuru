@@ -46,8 +46,12 @@ public class UsersRestService {
     public Response addContact(@Valid User user) {
 
         System.out.println("User to be added: " + user.getName());
-        userDao.addUser(user);
-        return Response.accepted().build();
+        if (userDao.addUser(user) == 202) {
+            return Response.accepted().build();}
+        else
+            {
+            return Response.status(0).build();
+            }
 
+        }
     }
-}
