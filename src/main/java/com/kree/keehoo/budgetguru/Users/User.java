@@ -31,17 +31,6 @@ public class User {
     private String lastName;
     private String email;
 
-    @OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
-    private Set<BudgetEntry> budgetEntries = new HashSet<>();
-
-    public Set<BudgetEntry> getBudgetEntries() {
-        return budgetEntries;
-    }
-
-    public void setBudgetEntries(Set<BudgetEntry> budgetEntries) {
-        this.budgetEntries = budgetEntries;
-    }
-
     public User(String login, String password, String name, String lastName, String email) {
         this.id = id;
 
