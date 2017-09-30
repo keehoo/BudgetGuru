@@ -28,6 +28,9 @@ public class BudgetEntryDao {
     public void addBudgetEntry(BudgetEntry budgetEntry) {
 
         if (!budgetItemList().contains(budgetEntry)) {
+            if (budgetEntry.getBudgetItem().getValue().doubleValue() > 0) {
+                budgetEntry.getBudgetItem().setCost();
+            }
             entityManager.persist(budgetEntry);
         }
     }

@@ -6,10 +6,11 @@ import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.validation.Valid;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -28,5 +29,18 @@ public class BudgetEntryService {
     @Produces(MediaType.APPLICATION_JSON)
     public List<BudgetEntry> getAllBudgets() {
         return budgetEntryDao.budgetItemList();
+    }
+
+
+    // POST
+
+
+    @Path("/add")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addBudgetEntry(@Valid BudgetEntry budgetEntry) {
+
+        budgetEntryDao.addBudgetEntry(budgetEntry);
+            return Response.accepted().build();
     }
 }
