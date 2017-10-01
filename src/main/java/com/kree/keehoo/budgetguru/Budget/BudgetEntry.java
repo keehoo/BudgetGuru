@@ -9,11 +9,15 @@ import java.time.LocalDateTime;
 @Entity
 @NamedQueries({
         @NamedQuery(name = BudgetEntry.GET_ALL_BUDGET_ENTRIES,
-                query = "select u from BudgetEntry u")
+                query = "select u from BudgetEntry u"),
+        @NamedQuery(name = BudgetEntry.GET_ALL_FOR_LOGIN,
+                query = "select b from BudgetEntry b where b.user = :id "
+        )
 })
 public class BudgetEntry {
 
     final public static String GET_ALL_BUDGET_ENTRIES= "BudgetEntry.GET_ALL_BUDGET_ENTRIES";
+    final public static String GET_ALL_FOR_LOGIN= "BudgetEntry.GET_ALL_FOR_LOGIN";
 
     @Id
     @GeneratedValue

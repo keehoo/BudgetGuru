@@ -2,15 +2,14 @@ package com.kree.keehoo.budgetguru.REST;
 
 import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
 import com.kree.keehoo.budgetguru.Daos.BudgetEntryDao;
-import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.print.attribute.standard.Media;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.awt.*;
 import java.util.List;
 
 /**
@@ -30,6 +29,15 @@ public class BudgetEntryService {
     public List<BudgetEntry> getAllBudgets() {
         return budgetEntryDao.budgetItemList();
     }
+
+
+    @Path("/allFor")
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<BudgetEntry> budgetEntries(@QueryParam("id") long id) {
+        return budgetEntryDao.getAllForLogin(id);
+    }
+
 
 
     // POST
