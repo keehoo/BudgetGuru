@@ -1,3 +1,4 @@
+/*
 package com.kree.keehoo.budgetguru.Servlets;
 
 import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
@@ -28,19 +29,21 @@ public class BudgetAddingServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        addDummyUser();
+    */
+/*    addDummyUser();
 
         User keehoo = userDao.getUserByLogin("keehoo");
 
         BudgetEntry budgetEntry = new BudgetEntry(new BudgetItem(new BigDecimal(500)));
         budgetEntry.setUser(userDao.getUserByLogin("keehoo").getId());
-        budgetEntryDao.addBudgetEntry(budgetEntry);
+        budgetEntryDao.addBudgetEntry(budgetEntry);*//*
+
 
 //
 //        budgetEntryDao.updateBudgetEntry(budgetEntry);
 //
 //        //req.setAttribute("user", users);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/main.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("main.jsp");
         dispatcher.forward(req, resp);
     }
 
@@ -55,3 +58,4 @@ public class BudgetAddingServlet extends HttpServlet {
 
     }
 }
+*/
