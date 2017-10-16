@@ -66,7 +66,7 @@ public class Vaadin extends UI {
     }
 
     @WebServlet(
-            value = {"/myui/*", "/VAADIN/*"}, asyncSupported = true, name = "MyUIServlet"
+            value = {"/users/*", "/VAADIN/*"}, asyncSupported = true, name = "MyUIServlet"
     )
    // @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = Vaadin.class, productionMode = false)
