@@ -3,3 +3,6 @@
 .idea/workspace.xml
 .idea
 .gitignore
+.target
+target/*
+.DS_Store
