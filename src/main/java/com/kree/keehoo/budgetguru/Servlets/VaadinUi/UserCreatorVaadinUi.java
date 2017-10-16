@@ -14,7 +14,7 @@ import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 
 @Theme("mytheme")
-@CDIUI("")
+@CDIUI("create")
 @SuppressWarnings("serial")
 public class UserCreatorVaadinUi extends UI {
 
@@ -31,25 +31,22 @@ public class UserCreatorVaadinUi extends UI {
         TextField email = new TextField("email");
         TextField pswd = new PasswordField("password");
 
-        User userToBeCreated = new User(login.getValue(), pswd.getValue(), name.getValue(), lastName.getValue(), email.getValue());
         Button createUserButton = new Button("Create user");
-        createUserButton.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(Button.ClickEvent clickEvent) {
-                userDao.addUser(userToBeCreated);
-            }
+
+        createUserButton.addClickListener((Button.ClickListener) clickEvent -> {
+                User userToBeCreated = new User(login.getValue(), pswd.getValue(), name.getValue(), lastName.getValue(), email.getValue());
+        userDao.addUser(userToBeCreated);
         });
 
         layout.addComponents(name, lastName, login, email, pswd, createUserButton);
         setContent(layout);
     }
 
-    @WebServlet(
-            value = {"/*", "/VAADIN/*"}, asyncSupported = true, name = "MyUIServlet"
+    @WebServlet(value = {"/create/*", "/VAADIN/*"}
+            , asyncSupported = true, name = "UserCreateServlet"
     )
-    // @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
-    @VaadinServletConfiguration(ui = Vaadin.class, productionMode = false)
-    public static class MyUIServlet extends VaadinCDIServlet {
+    @VaadinServletConfiguration(ui = UserCreatorVaadinUi.class, productionMode = false)
+    public static class UserCreatorServlet extends VaadinCDIServlet {
 
 
 

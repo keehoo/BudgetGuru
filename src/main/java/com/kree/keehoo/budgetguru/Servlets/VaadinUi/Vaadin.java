@@ -16,7 +16,7 @@ import javax.servlet.annotation.WebServlet;
 
 
 @Theme("mytheme")
-@CDIUI("")
+@CDIUI("users")
 @SuppressWarnings("serial")
 public class Vaadin extends UI {
 
@@ -68,7 +68,6 @@ public class Vaadin extends UI {
     @WebServlet(
             value = {"/users/*", "/VAADIN/*"}, asyncSupported = true, name = "MyUIServlet"
     )
-   // @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = Vaadin.class, productionMode = false)
     public static class MyUIServlet extends VaadinCDIServlet {
 
