@@ -33,17 +33,24 @@ public class UserCreatorVaadinUi extends UI {
 
         Button createUserButton = new Button("Create user");
 
-        createUserButton.addClickListener((Button.ClickListener) clickEvent -> {
+
+        createUserButton.addClickListener(new Button.ClickListener() {
+            @Override
+            public void buttonClick(Button.ClickEvent clickEvent) {
                 User userToBeCreated = new User(login.getValue(), pswd.getValue(), name.getValue(), lastName.getValue(), email.getValue());
-        userDao.addUser(userToBeCreated);
+                userDao.addUser(userToBeCreated);
+            }
         });
+
+
+
 
         layout.addComponents(name, lastName, login, email, pswd, createUserButton);
         setContent(layout);
     }
 
     @WebServlet(value = {"/create/*", "/VAADIN/*"}
-            , asyncSupported = true, name = "UserCreateServlet"
+            , asyncSupported = true, name = "UserCreatorServlet"
     )
     @VaadinServletConfiguration(ui = UserCreatorVaadinUi.class, productionMode = false)
     public static class UserCreatorServlet extends VaadinCDIServlet {
