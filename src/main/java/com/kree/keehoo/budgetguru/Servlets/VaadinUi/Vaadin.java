@@ -65,7 +65,7 @@ public class Vaadin extends UI {
         setContent(layout);
     }
 
-    @WebServlet(
+/*    @WebServlet(
             value = {"/users/*", "/VAADIN/*"}, asyncSupported = true, name = "MyUIServlet"
     )
     @VaadinServletConfiguration(ui = Vaadin.class, productionMode = false)
@@ -74,6 +74,6 @@ public class Vaadin extends UI {
 
 
 
-    }
+    }*/
 }
 

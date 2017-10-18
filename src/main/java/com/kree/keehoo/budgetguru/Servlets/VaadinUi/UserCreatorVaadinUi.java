@@ -14,7 +14,7 @@ import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 
 @Theme("mytheme")
-@CDIUI("create")
+@CDIUI("")
 @SuppressWarnings("serial")
 public class UserCreatorVaadinUi extends UI {
 
@@ -42,7 +42,7 @@ public class UserCreatorVaadinUi extends UI {
         setContent(layout);
     }
 
-    @WebServlet(value = {"/create/*", "/VAADIN/*"}
+/*    @WebServlet(value = {"/*", "/VAADIN/*"}
             , asyncSupported = true, name = "UserCreateServlet"
     )
     @VaadinServletConfiguration(ui = UserCreatorVaadinUi.class, productionMode = false)
@@ -51,6 +51,6 @@ public class UserCreatorVaadinUi extends UI {
 
 
 
-    }
+    }*/
 
 }
