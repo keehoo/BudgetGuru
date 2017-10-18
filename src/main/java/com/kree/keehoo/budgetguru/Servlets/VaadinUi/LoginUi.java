@@ -18,14 +18,26 @@ public class LoginUi extends UI {
 
     @Inject
     UserDao userDao;
+    private VaadinSession current;
+    private VerticalLayout layout;
 
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
 
-        VaadinSession current = VaadinSession.getCurrent();
+        current = VaadinSession.getCurrent();
 
-        final VerticalLayout layout = new VerticalLayout();
+        layout = new VerticalLayout();
+
+try
+{
+        if (current.getAttribute("isLogged").equals(true)) {
+            showInfo();
+        }}
+        catch (Exception e) {
+            System.out.println(e.getLocalizedMessage());
+
+        }
 
         TextField login = new TextField("login");
         TextField pswd = new PasswordField("password");
@@ -34,8 +46,8 @@ public class LoginUi extends UI {
         loginButton.addClickListener((Button.ClickListener) clickEvent -> {
             User user = userDao.getUserByLogin(login.getValue());
             if (user!=null && user.getPassword().equals(pswd.getValue())) {
-                current.setAttribute("currentUser", login.getValue());
-                current.setAttribute("isLogged", true);
+                setCurrentUser(login);
+
             }
             else {
                 current.setAttribute("isLogged", false);
@@ -49,5 +61,19 @@ public class LoginUi extends UI {
         layout.addComponents(login, pswd, loginButton);
         setContent(layout);
 
+    }
+
+    private void setCurrentUser(TextField login) {
+        try {current.getLockInstance().lock();
+        current.setAttribute("currentUser", login.getValue());
+        current.setAttribute("isLogged", true);}
+        finally {
+            current.getLockInstance().unlock();
+        }
+    }
+
+    private void showInfo() {
+        Label infoLabale = new Label("Currently logged in "+current.getAttribute("currentUser"));
+        layout.addComponent(infoLabale);
     }
 }
