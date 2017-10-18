@@ -14,7 +14,7 @@ import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 
 @Theme("mytheme")
-@CDIUI("create")
+@CDIUI("")
 @SuppressWarnings("serial")
 public class UserCreatorVaadinUi extends UI {
 
@@ -33,24 +33,17 @@ public class UserCreatorVaadinUi extends UI {
 
         Button createUserButton = new Button("Create user");
 
-
-        createUserButton.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(Button.ClickEvent clickEvent) {
+        createUserButton.addClickListener((Button.ClickListener) clickEvent -> {
                 User userToBeCreated = new User(login.getValue(), pswd.getValue(), name.getValue(), lastName.getValue(), email.getValue());
-                userDao.addUser(userToBeCreated);
-            }
+        userDao.addUser(userToBeCreated);
         });
-
-
-
 
         layout.addComponents(name, lastName, login, email, pswd, createUserButton);
         setContent(layout);
     }
 
-    @WebServlet(value = {"/create/*", "/VAADIN/*"}
-            , asyncSupported = true, name = "UserCreatorServlet"
+/*    @WebServlet(value = {"/*", "/VAADIN/*"}
+            , asyncSupported = true, name = "UserCreateServlet"
     )
     @VaadinServletConfiguration(ui = UserCreatorVaadinUi.class, productionMode = false)
     public static class UserCreatorServlet extends VaadinCDIServlet {
@@ -58,6 +51,6 @@ public class UserCreatorVaadinUi extends UI {
 
 
 
-    }
+    }*/
 
 }

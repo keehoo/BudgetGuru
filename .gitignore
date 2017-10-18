@@ -1,8 +1,8 @@
-/target
+target
 *.iml
 .idea/workspace.xml
 .idea
 .gitignore
-.target
-target/*
 .DS_Store
+target/*
+target/
