@@ -7,6 +7,7 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.cdi.server.VaadinCDIServlet;
 import com.vaadin.server.VaadinRequest;
+import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
@@ -53,16 +54,23 @@ public class Vaadin extends UI {
 //  users.add(new User("asdasd", "asdasdasd", "asdasdasd", "asdasdasd", "Asdasdasd"));
 
 
-        Grid<User> grid = new Grid<>();
-        grid.setCaption("My Grid");
-        grid.setItems(userDao.getAllUsers());
-        grid.setSizeFull();
-        grid.addColumn(User::getName).setCaption("Name");
-        grid.addColumn(User::getEmail).setCaption("Email");
-        layout.addComponent(grid);
-        layout.setExpandRatio(grid, 1); // Expand to fill
+        VaadinSession currentSession = VaadinSession.getCurrent();
 
-        setContent(layout);
+        if (currentSession.getAttribute("isLogged").equals(true)) {
+            Grid<User> grid = new Grid<>();
+            grid.setCaption("My Grid");
+            grid.setItems(userDao.getAllUsers());
+            grid.setSizeFull();
+            grid.addColumn(User::getName).setCaption("Name");
+            grid.addColumn(User::getEmail).setCaption("Email");
+            layout.addComponent(grid);
+            layout.setExpandRatio(grid, 1); // Expand to fill
+
+            setContent(layout);
+        }
+
+
+
     }
 
 /*    @WebServlet(
