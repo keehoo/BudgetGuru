@@ -27,7 +27,7 @@ public class Vaadin extends UI {
     protected void init(VaadinRequest vaadinRequest) {
         final VerticalLayout layout = new VerticalLayout();
 
-        userDao.addUser(new User("login", "pswd", "Krzysztof", "Kubicki", "kkubicki2@gmail.com"));
+      //  userDao.addUser(new User("login", "pswd", "Krzysztof", "Kubicki", "kkubicki2@gmail.com"));
 
   /*      final Label title = new Label();
         title.setValue("Please log in");
