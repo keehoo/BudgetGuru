@@ -1,6 +1,7 @@
 package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 
 import com.kree.keehoo.budgetguru.Daos.UserDao;
+import com.kree.keehoo.budgetguru.Servlets.VaadinUi.Views.LoggedView;
 import com.kree.keehoo.budgetguru.Users.User;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
@@ -57,13 +58,15 @@ public class Vaadin extends UI {
         VaadinSession currentSession = VaadinSession.getCurrent();
 
         if (currentSession.getAttribute("isLogged").equals(true)) {
+            LoggedView loggedView = new LoggedView();
+
             Grid<User> grid = new Grid<>();
             grid.setCaption("My Grid");
             grid.setItems(userDao.getAllUsers());
             grid.setSizeFull();
             grid.addColumn(User::getName).setCaption("Name");
             grid.addColumn(User::getEmail).setCaption("Email");
-            layout.addComponent(grid);
+            layout.addComponents(grid, loggedView);
             layout.setExpandRatio(grid, 1); // Expand to fill
 
             setContent(layout);

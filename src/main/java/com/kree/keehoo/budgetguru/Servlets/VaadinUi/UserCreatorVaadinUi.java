@@ -2,6 +2,7 @@ package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 
 
 import com.kree.keehoo.budgetguru.Daos.UserDao;
+import com.kree.keehoo.budgetguru.Servlets.VaadinUi.Views.LoggedView;
 import com.kree.keehoo.budgetguru.Users.User;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
@@ -15,7 +16,7 @@ import javax.inject.Inject;
 import javax.servlet.annotation.WebServlet;
 
 @Theme("mytheme")
-@CDIUI("")
+@CDIUI("createnewuser")
 @SuppressWarnings("serial")
 public class UserCreatorVaadinUi extends UI {
 
@@ -25,6 +26,8 @@ public class UserCreatorVaadinUi extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         final VerticalLayout layout = new VerticalLayout();
+
+        LoggedView loggedView = new LoggedView();
 
         TextField name = new TextField("Name");
         TextField lastName = new TextField("Last Name");
@@ -39,8 +42,14 @@ public class UserCreatorVaadinUi extends UI {
         userDao.addUser(userToBeCreated);
         });
 
-        layout.addComponents(name, lastName, login, email, pswd, createUserButton);
+        layout.addComponents(loggedView, name, lastName, login, email, pswd, createUserButton);
         setContent(layout);
+
+    /*
+    TODO: this should actually go to abstract UI
+        if (VaadinSession.getCurrent().getAttribute(LoginUi.IS_LOGGED) == null) {
+            getPage().setLocation("/login/");
+        }*/
     }
 
 /*    @WebServlet(value = {"/*", "/VAADIN/*"}
