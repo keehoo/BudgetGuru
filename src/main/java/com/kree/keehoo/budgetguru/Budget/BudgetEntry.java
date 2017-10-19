@@ -40,6 +40,10 @@ public class BudgetEntry {
     public BudgetEntry() {
     }
 
+    public double getValue() {
+        return budgetItem.getValue().doubleValue();
+    }
+
     public Long getId() {
         return id;
     }

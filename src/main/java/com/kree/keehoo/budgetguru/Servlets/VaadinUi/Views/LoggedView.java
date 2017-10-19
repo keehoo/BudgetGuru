@@ -10,9 +10,8 @@ import javax.validation.constraints.Null;
 public class LoggedView extends Label {
 
     VaadinSession session = VaadinSession.getCurrent();
-    String currentUser;
-    boolean isLogged;
-
+    public String currentUser;
+    public boolean isLogged;
 
     public LoggedView() {
 
