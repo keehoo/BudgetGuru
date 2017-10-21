@@ -38,29 +38,14 @@ public class UserCreatorVaadinUi extends UI {
         Button createUserButton = new Button("Create user");
 
         createUserButton.addClickListener((Button.ClickListener) clickEvent -> {
-                User userToBeCreated = new User(login.getValue(), pswd.getValue(), name.getValue(), lastName.getValue(), email.getValue());
-        userDao.addUser(userToBeCreated);
+            User userToBeCreated = new User(login.getValue(), pswd.getValue(), name.getValue(), lastName.getValue(), email.getValue());
+            userDao.addUser(userToBeCreated);
+            getPage().open("/login/", "");
+
         });
 
         layout.addComponents(loggedView, name, lastName, login, email, pswd, createUserButton);
         setContent(layout);
-
-    /*
-    TODO: this should actually go to abstract UI
-        if (VaadinSession.getCurrent().getAttribute(LoginUi.IS_LOGGED) == null) {
-            getPage().setLocation("/login/");
-        }*/
     }
-
-/*    @WebServlet(value = {"/*", "/VAADIN/*"}
-            , asyncSupported = true, name = "UserCreateServlet"
-    )
-    @VaadinServletConfiguration(ui = UserCreatorVaadinUi.class, productionMode = false)
-    public static class UserCreatorServlet extends VaadinCDIServlet {
-
-
-
-
-    }*/
 
 }

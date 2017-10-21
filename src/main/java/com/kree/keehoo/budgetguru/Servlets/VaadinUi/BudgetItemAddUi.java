@@ -41,7 +41,7 @@ public class BudgetItemAddUi extends AbstractUI {
         if (!budgetEntryDao.budgetItemList().isEmpty()) {
 
             showTable();
-
+getPage().reload();
         }
         setContent(layout);
     }
