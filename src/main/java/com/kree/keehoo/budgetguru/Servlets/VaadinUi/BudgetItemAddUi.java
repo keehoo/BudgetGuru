@@ -5,8 +5,6 @@ import com.kree.keehoo.budgetguru.Budget.BudgetItem;
 import com.kree.keehoo.budgetguru.Daos.BudgetEntryDao;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
-import com.kree.keehoo.budgetguru.Servlets.VaadinUi.Views.LoggedView;
-import com.kree.keehoo.budgetguru.Users.User;
 import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.server.VaadinRequest;
@@ -33,7 +31,12 @@ public class BudgetItemAddUi extends AbstractUI {
     @Override
     protected void init(VaadinRequest request) {
         super.init(request);
-
+        System.out.println(request.getPathInfo());
+        System.out.println(request.getRemoteUser());
+        System.out.println(request.getRemoteAddr());
+        System.out.println(request.getContextPath());
+        for (String s : request.getParameterMap().keySet())
+            System.out.println(request.getParameterMap().get(s) + " -> "+s);
         setupTextFields(layout);
         if (!budgetEntryDao.budgetItemList().isEmpty()) {
 
@@ -50,6 +53,9 @@ public class BudgetItemAddUi extends AbstractUI {
         grid.setSizeFull();
         grid.addColumn(BudgetEntry::getValue).setCaption("Value");
         grid.addColumn(BudgetEntry::getUser).setCaption("User id");
+        grid.addColumn(BudgetEntry::getDateOfCost).setCaption("Date of Cost");
+        grid.addColumn(BudgetEntry::getCategory).setCaption("Category");
+
         layout.addComponents(grid);
         layout.setExpandRatio(grid, 1); // Expand to fill
     }
@@ -58,6 +64,8 @@ public class BudgetItemAddUi extends AbstractUI {
 
         TextField value = new TextField("Value");
         Button addButton = new Button("Add cost");
+
+
 
         addButton.addClickListener((Button.ClickListener) event -> {
             BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(value.getValue())));

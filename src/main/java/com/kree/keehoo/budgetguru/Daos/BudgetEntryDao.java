@@ -8,7 +8,9 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -31,6 +33,7 @@ public class BudgetEntryDao {
             if (budgetEntry.getBudgetItem().getValue().doubleValue() > 0) {
                 budgetEntry.getBudgetItem().setCost();
             }
+
             entityManager.persist(budgetEntry);
         }
     }

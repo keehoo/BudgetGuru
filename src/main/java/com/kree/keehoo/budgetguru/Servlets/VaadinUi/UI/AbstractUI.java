@@ -10,6 +10,7 @@ import com.vaadin.ui.VerticalLayout;
 
 public abstract class AbstractUI extends UI{
 
+    public static final String REFERER = "referer";
     protected VerticalLayout layout;
     boolean isLogged;
 
@@ -18,6 +19,7 @@ public abstract class AbstractUI extends UI{
 
         if (VaadinSession.getCurrent().getAttribute(LoginUi.IS_LOGGED) == null) {
             isLogged = false;
+            VaadinSession.getCurrent().setAttribute(REFERER, request.getPathInfo());
             getPage().setLocation("/login/");
         }
         layout = new VerticalLayout();

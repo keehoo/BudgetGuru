@@ -1,6 +1,7 @@
 package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 
 import com.kree.keehoo.budgetguru.Daos.UserDao;
+import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
 import com.kree.keehoo.budgetguru.Users.User;
 import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
@@ -51,6 +52,7 @@ public class LoginUi extends UI {
             User user = userDao.getUserByLogin(login.getValue());
             if (user != null && user.getPassword().equals(pswd.getValue())) {
                 setCurrentUser(login);
+                getPage().setLocation((String) VaadinSession.getCurrent().getAttribute(AbstractUI.REFERER));
 
             } else {
                 current.setAttribute(IS_LOGGED, false);

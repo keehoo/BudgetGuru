@@ -4,7 +4,10 @@ import com.kree.keehoo.budgetguru.Users.User;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.util.Date;
 
 @Entity
 @NamedQueries({
@@ -22,22 +25,38 @@ public class BudgetEntry {
     @Id
     @GeneratedValue
     private Long id;
-
     private long user;
+    private LocalDate dateOfCost;
+    private LocalTime timeOfCost;
+    private Category category;
 
     @Embedded
     private BudgetItem budgetItem;
-
     public BudgetEntry(BudgetItem budgetItem) {
         this.budgetItem = budgetItem;
         boolean isCost;
         if (budgetItem.getValue().doubleValue() > 0) {
             isCost = true;
         } else isCost = false;
+        category = Category.FOOD_OUT;
+        dateOfCost = LocalDate.now();
+        timeOfCost = LocalTime.now();
+    }
+
+    public BudgetEntry(BudgetItem budgetItem, Category category) {
+        setCategory(category);
+        this.budgetItem = budgetItem;
+        boolean isCost;
+        if (budgetItem.getValue().doubleValue() > 0) {
+            isCost = true;
+        } else isCost = false;
+        dateOfCost = LocalDate.now();
+        timeOfCost = LocalTime.now();
 
     }
 
     public BudgetEntry() {
+
     }
 
     public double getValue() {
@@ -66,5 +85,29 @@ public class BudgetEntry {
 
     public void setBudgetItem(BudgetItem budgetItem) {
         this.budgetItem = budgetItem;
+    }
+
+    public LocalDate getDateOfCost() {
+        return dateOfCost;
+    }
+
+    public void setDateOfCost(LocalDate dateOfCost) {
+        this.dateOfCost = dateOfCost;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public LocalTime getTimeOfCost() {
+        return timeOfCost;
+    }
+
+    public void setTimeOfCost(LocalTime timeOfCost) {
+        this.timeOfCost = timeOfCost;
     }
 }
