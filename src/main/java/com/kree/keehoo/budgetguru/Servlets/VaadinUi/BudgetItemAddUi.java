@@ -41,7 +41,6 @@ public class BudgetItemAddUi extends AbstractUI {
         if (!budgetEntryDao.budgetItemList().isEmpty()) {
 
             showTable();
-getPage().reload();
         }
         setContent(layout);
     }
@@ -54,7 +53,9 @@ getPage().reload();
         grid.addColumn(BudgetEntry::getValue).setCaption("Value");
         grid.addColumn(BudgetEntry::getUser).setCaption("User id");
         grid.addColumn(BudgetEntry::getDateOfCost).setCaption("Date of Cost");
+        grid.addColumn(BudgetEntry::getTimeOfCost).setCaption("Time of Cost");
         grid.addColumn(BudgetEntry::getCategory).setCaption("Category");
+        grid.addColumn(BudgetEntry::getId).setCaption("Id");
 
         layout.addComponents(grid);
         layout.setExpandRatio(grid, 1); // Expand to fill
@@ -71,6 +72,7 @@ getPage().reload();
             BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(value.getValue())));
             b.setUser(userDao.getUserByLogin((String) VaadinSession.getCurrent().getAttribute(LoginUi.CURRENT_USER)).getId());
             budgetEntryDao.addBudgetEntry(b);
+            getPage().reload();
         });
 
         superLayout.addComponents(value, addButton);

@@ -52,7 +52,8 @@ public class LoginUi extends UI {
             User user = userDao.getUserByLogin(login.getValue());
             if (user != null && user.getPassword().equals(pswd.getValue())) {
                 setCurrentUser(login);
-                getPage().setLocation((String) VaadinSession.getCurrent().getAttribute(AbstractUI.REFERER));
+                if (VaadinSession.getCurrent().getAttribute(AbstractUI.REFERER) != null ) {
+                getPage().setLocation((String) VaadinSession.getCurrent().getAttribute(AbstractUI.REFERER));}
 
             } else {
                 current.setAttribute(IS_LOGGED, false);
@@ -65,7 +66,8 @@ public class LoginUi extends UI {
 
         Button createNewUserButton = new Button("New User");
         createNewUserButton.addClickListener((Button.ClickListener) event -> {
-           getPage().setLocation("/createnewuser");
+            getPage().open("/createnewuser/", "");
+          // getPage().setLocation("/createnewuser");
         });
 
         layout.addComponents(login, pswd, loginButton, createNewUserButton);

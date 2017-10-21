@@ -1,6 +1,7 @@
 package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 
 import com.kree.keehoo.budgetguru.Daos.UserDao;
+import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.Views.LoggedView;
 import com.kree.keehoo.budgetguru.Users.User;
 import com.vaadin.annotations.Theme;
@@ -20,40 +21,15 @@ import javax.servlet.annotation.WebServlet;
 @Theme("mytheme")
 @CDIUI("users")
 @SuppressWarnings("serial")
-public class Vaadin extends UI {
+public class Vaadin extends AbstractUI {
 
     @Inject
     UserDao userDao;
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        final VerticalLayout layout = new VerticalLayout();
-
-      //  userDao.addUser(new User("login", "pswd", "Krzysztof", "Kubicki", "kkubicki2@gmail.com"));
-
-  /*      final Label title = new Label();
-        title.setValue("Please log in");
-        title.addStyleName(" h1 ");
-
-        final TextField name = new TextField();
-        name.setCaption("email");
-
-        final TextField password = new PasswordField();
-        password.setCaption("password");
-
-        Button button = new Button("Log in");
-        button.addClickListener( e -> {
-            layout.addComponent(new Label("Thanks " + name.getValue().split("@")[0]
-                    + ", you're dummy logged in!"));
-
-        });
-
-
-        layout.addComponents(title, name, password, button);*/
-
-//  List<User> users = new ArrayList<>();
-//  users.add(new User("asdasd", "asdasdasd", "asdasdasd", "asdasdasd", "Asdasdasd"));
-
+        super.init(vaadinRequest);
+        userDao.addUser(new User("k", "k", "k", "k", "k"));
 
         VaadinSession currentSession = VaadinSession.getCurrent();
 
@@ -65,13 +41,14 @@ public class Vaadin extends UI {
             grid.setItems(userDao.getAllUsers());
             grid.setSizeFull();
             grid.addColumn(User::getName).setCaption("Name");
+            grid.addColumn(User::getLastName).setCaption("Last Name");
             grid.addColumn(User::getEmail).setCaption("Email");
+            grid.addColumn(User::getLogin).setCaption("login");
             layout.addComponents(grid, loggedView);
             layout.setExpandRatio(grid, 1); // Expand to fill
 
             setContent(layout);
         }
-
 
 
     }
