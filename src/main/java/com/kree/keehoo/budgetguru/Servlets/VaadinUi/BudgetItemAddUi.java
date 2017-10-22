@@ -7,17 +7,17 @@ import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
 import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
+import com.vaadin.event.selection.SelectionListener;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinSession;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Grid;
-import com.vaadin.ui.TextField;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
+import com.vaadin.ui.components.grid.ItemClickListener;
 
 import javax.inject.Inject;
 import java.math.BigDecimal;
+import java.util.Optional;
 
-@Theme("mytheme")
+@Theme("valo")
 @CDIUI("add")
 public class BudgetItemAddUi extends AbstractUI {
 
@@ -56,6 +56,16 @@ public class BudgetItemAddUi extends AbstractUI {
         grid.addColumn(BudgetEntry::getTimeOfCost).setCaption("Time of Cost");
         grid.addColumn(BudgetEntry::getCategory).setCaption("Category");
         grid.addColumn(BudgetEntry::getId).setCaption("Id");
+
+        grid.addSelectionListener((SelectionListener<BudgetEntry>) event -> {
+            Optional<BudgetEntry> firstSelectedItem = event.getFirstSelectedItem();
+            String result = firstSelectedItem.isPresent() ? "Selected :"+firstSelectedItem.get().getValue() : "Oops - optional resulted in no value";
+            Notification.show(result);
+        });
+        grid.addItemClickListener((ItemClickListener<BudgetEntry>) event -> {
+
+        }
+        );
 
         layout.addComponents(grid);
         layout.setExpandRatio(grid, 1); // Expand to fill
