@@ -41,7 +41,7 @@ public class BudgetEntry {
         category = "UNDEFINED";
     }
 
-    public BudgetEntry(BudgetItem budgetItem, Category category) {
+    public BudgetEntry(BudgetItem budgetItem, String category) {
         setCategory(category);
         this.budgetItem = budgetItem;
         boolean isCost;
