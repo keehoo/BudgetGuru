@@ -28,7 +28,7 @@ public class BudgetEntry {
     private long user;
     private String dateOfCost;
     private String timeOfCost;
-    private Category category;
+    private String category;
 
     @Embedded
     private BudgetItem budgetItem;
@@ -38,7 +38,7 @@ public class BudgetEntry {
         if (budgetItem.getValue().doubleValue() > 0) {
             isCost = true;
         } else isCost = false;
-        category = Category.FOOD_OUT;
+        category = "UNDEFINED";
     }
 
     public BudgetEntry(BudgetItem budgetItem, Category category) {
@@ -91,11 +91,11 @@ public class BudgetEntry {
         this.dateOfCost = dateOfCost;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 

@@ -39,7 +39,7 @@ public class BudgetItemAddUi extends AbstractUI {
     @Inject
     ExpenseCatDao catDao;
 
-    private Category cat;
+    private String cat;
 
 
     @Override
@@ -99,7 +99,7 @@ catAddingLayout.addComponents(category, addCatButton);
         categoryComboBox.setEmptySelectionAllowed(false);
         categoryComboBox.setEmptySelectionCaption("Please select Category");
 
-       categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> cat = (Category) event.getValue());
+       categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> cat = (String) event.getValue());
 
         addButton.addClickListener((Button.ClickListener) event -> {
             BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(value.getValue())));
