@@ -1,12 +1,15 @@
 package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 
 import com.kree.keehoo.budgetguru.Daos.UserDao;
+import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
+import com.kree.keehoo.budgetguru.Servlets.VaadinUi.Views.LoggedView;
 import com.kree.keehoo.budgetguru.Users.User;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.cdi.server.VaadinCDIServlet;
 import com.vaadin.server.VaadinRequest;
+import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.Grid;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
@@ -18,51 +21,36 @@ import javax.servlet.annotation.WebServlet;
 @Theme("mytheme")
 @CDIUI("users")
 @SuppressWarnings("serial")
-public class Vaadin extends UI {
+public class Vaadin extends AbstractUI {
 
     @Inject
     UserDao userDao;
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        final VerticalLayout layout = new VerticalLayout();
+        super.init(vaadinRequest);
+        userDao.addUser(new User("k", "k", "k", "k", "k"));
 
-        userDao.addUser(new User("login", "pswd", "Krzysztof", "Kubicki", "kkubicki2@gmail.com"));
+        VaadinSession currentSession = VaadinSession.getCurrent();
 
-  /*      final Label title = new Label();
-        title.setValue("Please log in");
-        title.addStyleName(" h1 ");
+        if (currentSession.getAttribute("isLogged").equals(true)) {
+            LoggedView loggedView = new LoggedView();
 
-        final TextField name = new TextField();
-        name.setCaption("email");
+            Grid<User> grid = new Grid<>();
+            grid.setCaption("My Grid");
+            grid.setItems(userDao.getAllUsers());
+            grid.setSizeFull();
+            grid.addColumn(User::getName).setCaption("Name");
+            grid.addColumn(User::getLastName).setCaption("Last Name");
+            grid.addColumn(User::getEmail).setCaption("Email");
+            grid.addColumn(User::getLogin).setCaption("login");
+            layout.addComponents(grid, loggedView);
+            layout.setExpandRatio(grid, 1); // Expand to fill
 
-        final TextField password = new PasswordField();
-        password.setCaption("password");
-
-        Button button = new Button("Log in");
-        button.addClickListener( e -> {
-            layout.addComponent(new Label("Thanks " + name.getValue().split("@")[0]
-                    + ", you're dummy logged in!"));
-
-        });
-
-
-        layout.addComponents(title, name, password, button);*/
-
-//  List<User> users = new ArrayList<>();
-//  users.add(new User("asdasd", "asdasdasd", "asdasdasd", "asdasdasd", "Asdasdasd"));
+            setContent(layout);
+        }
 
 
-        Grid<User> grid = new Grid<>();
-        grid.setCaption("My Grid");
-        grid.setItems(userDao.getAllUsers());
-        grid.setSizeFull();
-        grid.addColumn(User::getName).setCaption("Name");
-        grid.addColumn(User::getEmail).setCaption("Email");
-        layout.addComponent(grid);
-        layout.setExpandRatio(grid, 1); // Expand to fill
-
-        setContent(layout);
     }
 
 /*    @WebServlet(

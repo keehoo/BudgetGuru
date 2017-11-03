@@ -8,7 +8,9 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -25,22 +27,26 @@ public class BudgetEntryDao {
         return list;
     }
 
+    public List<BudgetEntry> getAllForLogin(long id) {
+        List<BudgetEntry> list = entityManager.createNamedQuery(BudgetEntry.GET_ALL_FOR_LOGIN).setParameter("id", id).getResultList();
+        return list;
+    }
+
+
+
+
     public void addBudgetEntry(BudgetEntry budgetEntry) {
 
         if (!budgetItemList().contains(budgetEntry)) {
             if (budgetEntry.getBudgetItem().getValue().doubleValue() > 0) {
                 budgetEntry.getBudgetItem().setCost();
             }
+
             entityManager.persist(budgetEntry);
         }
     }
 
     public void updateBudgetEntry(BudgetEntry budgetEntry) {
         entityManager.merge(budgetEntry);
-    }
-
-    public List<BudgetEntry> getAllForLogin(long id) {
-        List<BudgetEntry> list = entityManager.createNamedQuery(BudgetEntry.GET_ALL_FOR_LOGIN).setParameter("id", id).getResultList();
-        return list;
     }
 }
