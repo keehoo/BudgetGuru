@@ -78,7 +78,6 @@ public class BudgetItemAddUi extends AbstractUI {
         Button addButton = new Button("Add cost");
         Label label = new Label("Category");
 
-
         ComboBox categoryComboBox = new ComboBox();
 
         categoryComboBox.setItems(Category.values());
@@ -90,12 +89,6 @@ public class BudgetItemAddUi extends AbstractUI {
            cat = (Category) event.getValue();
        });
 
-
-
-
-
-
-
         addButton.addClickListener((Button.ClickListener) event -> {
             BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(value.getValue())));
             b.setUser(userDao.getUserByLogin((String) VaadinSession.getCurrent().getAttribute(LoginUi.CURRENT_USER)).getId());
@@ -105,7 +98,5 @@ public class BudgetItemAddUi extends AbstractUI {
         });
 
         superLayout.addComponents(value, addButton, label, categoryComboBox);
-
     }
-
 }

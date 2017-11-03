@@ -26,8 +26,8 @@ public class BudgetEntry {
     @GeneratedValue
     private Long id;
     private long user;
-    private LocalDate dateOfCost;
-    private LocalTime timeOfCost;
+    private String dateOfCost;
+    private String timeOfCost;
     private Category category;
 
     @Embedded
@@ -39,8 +39,6 @@ public class BudgetEntry {
             isCost = true;
         } else isCost = false;
         category = Category.FOOD_OUT;
-        dateOfCost = LocalDate.now();
-        timeOfCost = LocalTime.now();
     }
 
     public BudgetEntry(BudgetItem budgetItem, Category category) {
@@ -50,8 +48,6 @@ public class BudgetEntry {
         if (budgetItem.getValue().doubleValue() > 0) {
             isCost = true;
         } else isCost = false;
-        dateOfCost = LocalDate.now();
-        timeOfCost = LocalTime.now();
 
     }
 
@@ -87,11 +83,11 @@ public class BudgetEntry {
         this.budgetItem = budgetItem;
     }
 
-    public LocalDate getDateOfCost() {
+    public String getDateOfCost() {
         return dateOfCost;
     }
 
-    public void setDateOfCost(LocalDate dateOfCost) {
+    public void setDateOfCost(String dateOfCost) {
         this.dateOfCost = dateOfCost;
     }
 
@@ -103,11 +99,11 @@ public class BudgetEntry {
         this.category = category;
     }
 
-    public LocalTime getTimeOfCost() {
+    public String getTimeOfCost() {
         return timeOfCost;
     }
 
-    public void setTimeOfCost(LocalTime timeOfCost) {
+    public void setTimeOfCost(String timeOfCost) {
         this.timeOfCost = timeOfCost;
     }
 }
