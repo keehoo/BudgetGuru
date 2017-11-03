@@ -2,11 +2,14 @@ package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 
 import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
 import com.kree.keehoo.budgetguru.Budget.BudgetItem;
+import com.kree.keehoo.budgetguru.Budget.Category;
 import com.kree.keehoo.budgetguru.Daos.BudgetEntryDao;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
 import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
+import com.vaadin.data.HasValue;
+import com.vaadin.data.provider.ListDataProvider;
 import com.vaadin.event.selection.SelectionListener;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinSession;
@@ -15,6 +18,9 @@ import com.vaadin.ui.components.grid.ItemClickListener;
 
 import javax.inject.Inject;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.EnumSet;
+import java.util.List;
 import java.util.Optional;
 
 @Theme("valo")
@@ -27,19 +33,14 @@ public class BudgetItemAddUi extends AbstractUI {
     @Inject
     UserDao userDao;
 
+    private Category cat;
+
 
     @Override
     protected void init(VaadinRequest request) {
         super.init(request);
-        System.out.println(request.getPathInfo());
-        System.out.println(request.getRemoteUser());
-        System.out.println(request.getRemoteAddr());
-        System.out.println(request.getContextPath());
-        for (String s : request.getParameterMap().keySet())
-            System.out.println(request.getParameterMap().get(s) + " -> "+s);
         setupTextFields(layout);
         if (!budgetEntryDao.budgetItemList().isEmpty()) {
-
             showTable();
         }
         setContent(layout);
@@ -75,17 +76,35 @@ public class BudgetItemAddUi extends AbstractUI {
 
         TextField value = new TextField("Value");
         Button addButton = new Button("Add cost");
+        Label label = new Label("Category");
+
+
+        ComboBox categoryComboBox = new ComboBox();
+
+        categoryComboBox.setItems(Category.values());
+       // categoryComboBox.setItemCaptionGenerator(Category::);
+        categoryComboBox.setEmptySelectionAllowed(false);
+        categoryComboBox.setEmptySelectionCaption("Please select Category");
+
+       categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> {
+           cat = (Category) event.getValue();
+       });
+
+
+
+
 
 
 
         addButton.addClickListener((Button.ClickListener) event -> {
             BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(value.getValue())));
             b.setUser(userDao.getUserByLogin((String) VaadinSession.getCurrent().getAttribute(LoginUi.CURRENT_USER)).getId());
+            b.setCategory(cat);
             budgetEntryDao.addBudgetEntry(b);
             getPage().reload();
         });
 
-        superLayout.addComponents(value, addButton);
+        superLayout.addComponents(value, addButton, label, categoryComboBox);
 
     }
 

@@ -27,6 +27,14 @@ public class BudgetEntryDao {
         return list;
     }
 
+    public List<BudgetEntry> getAllForLogin(long id) {
+        List<BudgetEntry> list = entityManager.createNamedQuery(BudgetEntry.GET_ALL_FOR_LOGIN).setParameter("id", id).getResultList();
+        return list;
+    }
+
+
+
+
     public void addBudgetEntry(BudgetEntry budgetEntry) {
 
         if (!budgetItemList().contains(budgetEntry)) {
@@ -40,10 +48,5 @@ public class BudgetEntryDao {
 
     public void updateBudgetEntry(BudgetEntry budgetEntry) {
         entityManager.merge(budgetEntry);
-    }
-
-    public List<BudgetEntry> getAllForLogin(long id) {
-        List<BudgetEntry> list = entityManager.createNamedQuery(BudgetEntry.GET_ALL_FOR_LOGIN).setParameter("id", id).getResultList();
-        return list;
     }
 }
