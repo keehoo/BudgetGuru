@@ -1,5 +1,7 @@
 package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 
+import com.kree.keehoo.budgetguru.Budget.ExpenseCategory;
+import com.kree.keehoo.budgetguru.Daos.ExpenseCatDao;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
 import com.kree.keehoo.budgetguru.Users.User;
@@ -25,6 +27,9 @@ public class LoginUi extends UI {
     public static final String APPARENTLY_THERE_S_AN_ISSUE_WITH_LOGIN = "Apparently there's an issue with login. There's either no user of specifed login or the password isn't correct. Please try again or create a new user.";
     @Inject
     UserDao userDao;
+
+    @Inject
+    ExpenseCatDao expensecategorydao;
     private VaadinSession current;
     private VerticalLayout layout;
 
@@ -69,6 +74,7 @@ public class LoginUi extends UI {
             getPage().open("/createnewuser/", "");
           // getPage().setLocation("/createnewuser");
         });
+        checkResult();
 
         layout.addComponents(login, pswd, loginButton, createNewUserButton);
         setContent(layout);
@@ -83,6 +89,13 @@ public class LoginUi extends UI {
         } finally {
             current.getLockInstance().unlock();
         }
+    }
+
+    private void checkResult() {
+        expensecategorydao.add(new ExpenseCategory("GROCERIES"));
+        expensecategorydao.add(new ExpenseCategory("CAR"));
+        expensecategorydao.add(new ExpenseCategory("ENTERTAINMENT"));
+        expensecategorydao.add(new ExpenseCategory("FOOD OUT"));
     }
 
     private void showInfo() {

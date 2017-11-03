@@ -3,7 +3,9 @@ package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
 import com.kree.keehoo.budgetguru.Budget.BudgetItem;
 import com.kree.keehoo.budgetguru.Budget.Category;
+import com.kree.keehoo.budgetguru.Budget.ExpenseCategory;
 import com.kree.keehoo.budgetguru.Daos.BudgetEntryDao;
+import com.kree.keehoo.budgetguru.Daos.ExpenseCatDao;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
 import com.vaadin.annotations.Theme;
@@ -17,6 +19,7 @@ import com.vaadin.ui.*;
 import com.vaadin.ui.components.grid.ItemClickListener;
 
 import javax.inject.Inject;
+import javax.xml.soap.Text;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.EnumSet;
@@ -32,6 +35,9 @@ public class BudgetItemAddUi extends AbstractUI {
 
     @Inject
     UserDao userDao;
+
+    @Inject
+    ExpenseCatDao catDao;
 
     private Category cat;
 
@@ -77,17 +83,23 @@ public class BudgetItemAddUi extends AbstractUI {
         TextField value = new TextField("Value");
         Button addButton = new Button("Add cost");
         Label label = new Label("Category");
-
         ComboBox categoryComboBox = new ComboBox();
+        HorizontalLayout catAddingLayout = new HorizontalLayout();
+        TextField category = new TextField("category to be added");
+        Button addCatButton = new Button("add category");
+        addCatButton.addClickListener((Button.ClickListener) event -> catDao.add(new ExpenseCategory(category.getValue())));
+catAddingLayout.addComponents(category, addCatButton);
+        for (ExpenseCategory s : catDao.getAllCategories()) {
+            System.out.println(s.getCategoryName() +  "  " + s.getId());
+        }
 
-        categoryComboBox.setItems(Category.values());
+
+        categoryComboBox.setItems(catDao.getCatNames());
        // categoryComboBox.setItemCaptionGenerator(Category::);
         categoryComboBox.setEmptySelectionAllowed(false);
         categoryComboBox.setEmptySelectionCaption("Please select Category");
 
-       categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> {
-           cat = (Category) event.getValue();
-       });
+       categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> cat = (Category) event.getValue());
 
         addButton.addClickListener((Button.ClickListener) event -> {
             BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(value.getValue())));
@@ -97,6 +109,6 @@ public class BudgetItemAddUi extends AbstractUI {
             getPage().reload();
         });
 
-        superLayout.addComponents(value, addButton, label, categoryComboBox);
+        superLayout.addComponents(value, addButton, label, categoryComboBox, catAddingLayout);
     }
 }
