@@ -22,9 +22,13 @@ public class ExpenseCatDao {
         return manager.createNamedQuery(ExpenseCategory.GET_ALL).getResultList();
     }
 
-    public void add(ExpenseCategory e) {
+    public boolean add(ExpenseCategory e) {
         if (!Arrays.asList(getCatNames()).contains(e.getCategoryName())){
             manager.persist(e);
+            return true;
+        }
+        else {
+            return false;
         }
     }
 
