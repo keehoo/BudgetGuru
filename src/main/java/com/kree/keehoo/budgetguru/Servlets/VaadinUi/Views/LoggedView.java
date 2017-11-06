@@ -1,31 +1,35 @@
 package com.kree.keehoo.budgetguru.Servlets.VaadinUi.Views;
 
-import com.kree.keehoo.budgetguru.Servlets.VaadinUi.LoginUi;
-import com.vaadin.cdi.internal.VaadinContextualStorage;
-import com.vaadin.server.VaadinSession;
-import com.vaadin.shared.ApplicationConstants;
-import com.vaadin.ui.Component;
+import com.kree.keehoo.budgetguru.Utils.SessionDataUtils;
 import com.vaadin.ui.Label;
 
-import javax.validation.constraints.Null;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 
 public class LoggedView extends Label {
 
-    VaadinSession session = VaadinSession.getCurrent();
-    public String currentUser;
-    public boolean isLogged;
+    @Inject
+    SessionDataUtils sessionDataUtils;
+
+    private static final String ERROR = "error";
+    private static final String SMALL = "small";
+    private static final String LOGGED_IN_AS = "Logged in as ";
+    private static final String NOT_LOGGED_IN_PLEASE_LOG_IN_OR_CREATE_A_NEW_USER = "Not logged in. Please log in or create a new user";
 
     public LoggedView() {
 
 
+        try {
+            addStyleName(SMALL);
+            String currentUser = sessionDataUtils.getCurrentUser();
+            boolean isLogged = sessionDataUtils.isUserLogged();
+            if (isLogged) {
+                setValue(LOGGED_IN_AS + currentUser);
+            }
 
-            try {
-            currentUser = (String) session.getAttribute(LoginUi.CURRENT_USER);
-            isLogged = (boolean) session.getAttribute(LoginUi.IS_LOGGED);
-            setValue("Logged in as "+currentUser);
-            }
-            catch (NullPointerException e) {
-                setValue("Not logged in, please log in");
-            }
+        } catch (NullPointerException e) {
+            addStyleName(ERROR);
+            setValue(NOT_LOGGED_IN_PLEASE_LOG_IN_OR_CREATE_A_NEW_USER);
+        }
     }
 }

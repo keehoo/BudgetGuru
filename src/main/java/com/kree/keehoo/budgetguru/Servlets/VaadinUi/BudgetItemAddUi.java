@@ -8,6 +8,7 @@ import com.kree.keehoo.budgetguru.Daos.BudgetEntryDao;
 import com.kree.keehoo.budgetguru.Daos.ExpenseCatDao;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
+import com.kree.keehoo.budgetguru.Utils.SessionDataUtils;
 import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.data.HasValue;
@@ -103,7 +104,7 @@ catAddingLayout.addComponents(category, addCatButton);
 
         addButton.addClickListener((Button.ClickListener) event -> {
             BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(value.getValue())));
-            b.setUser(userDao.getUserByLogin((String) VaadinSession.getCurrent().getAttribute(LoginUi.CURRENT_USER)).getId());
+            b.setUser(userDao.getUserByLogin((String) VaadinSession.getCurrent().getAttribute(SessionDataUtils.CURRENT_USER)).getId());
             b.setCategory(cat);
             budgetEntryDao.addBudgetEntry(b);
             getPage().reload();
