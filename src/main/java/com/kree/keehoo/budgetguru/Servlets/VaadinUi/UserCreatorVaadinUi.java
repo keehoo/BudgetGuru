@@ -4,16 +4,13 @@ package com.kree.keehoo.budgetguru.Servlets.VaadinUi;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.Views.LoggedView;
 import com.kree.keehoo.budgetguru.Users.User;
+import com.kree.keehoo.budgetguru.Utils.HashingUtils;
 import com.vaadin.annotations.Theme;
-import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.cdi.CDIUI;
-import com.vaadin.cdi.server.VaadinCDIServlet;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.*;
 
 import javax.inject.Inject;
-import javax.servlet.annotation.WebServlet;
 
 @Theme("mytheme")
 @CDIUI("createnewuser")
@@ -22,6 +19,9 @@ public class UserCreatorVaadinUi extends UI {
 
     @Inject
     UserDao userDao;
+
+    @Inject
+    HashingUtils hashingUtils;
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
@@ -38,7 +38,7 @@ public class UserCreatorVaadinUi extends UI {
         Button createUserButton = new Button("Create user");
 
         createUserButton.addClickListener((Button.ClickListener) clickEvent -> {
-            User userToBeCreated = new User(login.getValue(), pswd.getValue(), name.getValue(), lastName.getValue(), email.getValue());
+            User userToBeCreated = new User(login.getValue(), hashingUtils.hash2withGuava(pswd.getValue()), name.getValue(), lastName.getValue(), email.getValue());
             userDao.addUser(userToBeCreated);
             getPage().open("/login/", "");
 
@@ -47,5 +47,7 @@ public class UserCreatorVaadinUi extends UI {
         layout.addComponents(loggedView, name, lastName, login, email, pswd, createUserButton);
         setContent(layout);
     }
+
+
 
 }

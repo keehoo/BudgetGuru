@@ -1,7 +1,5 @@
 package com.kree.keehoo.budgetguru.REST;
 
-
-import com.kree.keehoo.budgetguru.Budget.BudgetEntry;
 import com.kree.keehoo.budgetguru.Budget.ExpenseCategory;
 import com.kree.keehoo.budgetguru.Daos.ExpenseCatDao;
 

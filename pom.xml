@@ -198,6 +198,16 @@
             <artifactId>cdi-api</artifactId>
             <version>LATEST</version>
         </dependency>
+
+        <!-- Base64 -->
+        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>LATEST</version>
+        </dependency>
+
+
     </dependencies>
     
 

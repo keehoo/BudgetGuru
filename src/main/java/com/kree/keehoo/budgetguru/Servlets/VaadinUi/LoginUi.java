@@ -5,6 +5,7 @@ import com.kree.keehoo.budgetguru.Daos.ExpenseCatDao;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Servlets.VaadinUi.UI.AbstractUI;
 import com.kree.keehoo.budgetguru.Users.User;
+import com.kree.keehoo.budgetguru.Utils.HashingUtils;
 import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.server.VaadinRequest;
@@ -30,6 +31,9 @@ public class LoginUi extends UI {
 
     @Inject
     ExpenseCatDao expensecategorydao;
+
+    @Inject
+    private HashingUtils hashingUtils;
     private VaadinSession current;
     private VerticalLayout layout;
 
@@ -55,7 +59,7 @@ public class LoginUi extends UI {
 
         loginButton.addClickListener((Button.ClickListener) clickEvent -> {
             User user = userDao.getUserByLogin(login.getValue());
-            if (user != null && user.getPassword().equals(pswd.getValue())) {
+            if (user != null && user.getPassword().equals(hashingUtils.hash2withGuava(pswd.getValue()))) {
                 setCurrentUser(login);
                 if (VaadinSession.getCurrent().getAttribute(AbstractUI.REFERER) != null ) {
                 getPage().setLocation((String) VaadinSession.getCurrent().getAttribute(AbstractUI.REFERER));}
@@ -65,7 +69,7 @@ public class LoginUi extends UI {
                 current.setAttribute(CURRENT_USER, null);
                 Notification.show(UNABLE_TO_LOG_IN_TOAST_TEXT,
                         APPARENTLY_THERE_S_AN_ISSUE_WITH_LOGIN,
-                        Notification.Type.HUMANIZED_MESSAGE);
+                        Notification.Type.WARNING_MESSAGE);
             }
         });
 
