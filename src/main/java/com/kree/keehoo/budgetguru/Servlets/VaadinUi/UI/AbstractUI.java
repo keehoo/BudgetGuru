@@ -22,26 +22,19 @@ public abstract class AbstractUI extends UI{
 
     @Override
     protected void init(VaadinRequest request) {
+        layout = new VerticalLayout();
 
         if ( sessionDataUtils.getCurrentUser() == null) {
+            System.out.println("Abstract UI - the user is null, so I'm redirecting to login page");
             isLogged = false;
             sessionDataUtils.setReferer(request);
             gotoLoginPage();
-            return;
         }
-        layout = new VerticalLayout();
-        addIsLoggedView();
     }
 
     private void gotoLoginPage() {
         getPage().setLocation("/login/");
     }
 
-    private void addIsLoggedView() {
-
-        LoggedView loggedView = new LoggedView();
-        layout.addComponent(loggedView);
-
-    }
 
 }

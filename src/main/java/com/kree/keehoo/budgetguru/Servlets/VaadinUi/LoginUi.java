@@ -34,7 +34,6 @@ public class LoginUi extends UI {
     @Inject
     SessionDataUtils sessionUtils;
 
-    private VaadinSession current;
     private VerticalLayout layout;
     private Button loginButton;
     private Button createNewUserButton;
@@ -46,7 +45,7 @@ public class LoginUi extends UI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
 
-        current = VaadinSession.getCurrent();
+        VaadinSession current = VaadinSession.getCurrent();
         layout = new VerticalLayout();
 
         setupTextFields();

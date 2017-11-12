@@ -29,13 +29,10 @@ public class Vaadin extends AbstractUI {
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         super.init(vaadinRequest);
-        userDao.addUser(new User("k", "k", "k", "k", "k"));
-
         VaadinSession currentSession = VaadinSession.getCurrent();
 
         if (currentSession.getAttribute("isLogged").equals(true)) {
             LoggedView loggedView = new LoggedView();
-
             Grid<User> grid = new Grid<>();
             grid.setCaption("My Grid");
             grid.setItems(userDao.getAllUsers());
@@ -46,22 +43,8 @@ public class Vaadin extends AbstractUI {
             grid.addColumn(User::getLogin).setCaption("login");
             layout.addComponents(grid, loggedView);
             layout.setExpandRatio(grid, 1); // Expand to fill
-
             setContent(layout);
         }
-
-
     }
-
-/*    @WebServlet(
-            value = {"/users/*", "/VAADIN/*"}, asyncSupported = true, name = "MyUIServlet"
-    )
-    @VaadinServletConfiguration(ui = Vaadin.class, productionMode = false)
-    public static class MyUIServlet extends VaadinCDIServlet {
-
-
-
-
-    }*/
 }
 

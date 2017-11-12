@@ -46,7 +46,7 @@ public class BudgetItemAddUi extends AbstractUI {
     @Override
     protected void init(VaadinRequest request) {
         super.init(request);
-        setupTextFields(layout);
+        setupTextFields();
         if (!budgetEntryDao.budgetItemList().isEmpty()) {
             showTable();
         }
@@ -67,40 +67,44 @@ public class BudgetItemAddUi extends AbstractUI {
 
         grid.addSelectionListener((SelectionListener<BudgetEntry>) event -> {
             Optional<BudgetEntry> firstSelectedItem = event.getFirstSelectedItem();
-            String result = firstSelectedItem.isPresent() ? "Selected :"+firstSelectedItem.get().getValue() : "Oops - optional resulted in no value";
+            String result = firstSelectedItem.map(budgetEntry -> "Selected :" + budgetEntry.getValue()).orElse("Oops - optional resulted in no value");
             Notification.show(result);
         });
         grid.addItemClickListener((ItemClickListener<BudgetEntry>) event -> {
 
-        }
+                }
         );
 
         layout.addComponents(grid);
         layout.setExpandRatio(grid, 1); // Expand to fill
     }
 
-    private void setupTextFields(VerticalLayout superLayout) {
-
+    private void setupTextFields() {
         TextField value = new TextField("Value");
         Button addButton = new Button("Add cost");
         Label label = new Label("Category");
         ComboBox categoryComboBox = new ComboBox();
+
+        categoryComboBox.setItems(catDao.getCatNames());
+        // categoryComboBox.setItemCaptionGenerator(Category::);
+        categoryComboBox.setEmptySelectionAllowed(false);
+        categoryComboBox.setEmptySelectionCaption("Please select Category");
+
+        categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> cat = (String) event.getValue());
+
+
+
+
+
         HorizontalLayout catAddingLayout = new HorizontalLayout();
         TextField category = new TextField("category to be added");
         Button addCatButton = new Button("add category");
         addCatButton.addClickListener((Button.ClickListener) event -> catDao.add(new ExpenseCategory(category.getValue())));
-catAddingLayout.addComponents(category, addCatButton);
+        catAddingLayout.addComponents(category, addCatButton);
         for (ExpenseCategory s : catDao.getAllCategories()) {
-            System.out.println(s.getCategoryName() +  "  " + s.getId());
+            System.out.println(s.getCategoryName() + "  " + s.getId());
         }
 
-
-        categoryComboBox.setItems(catDao.getCatNames());
-       // categoryComboBox.setItemCaptionGenerator(Category::);
-        categoryComboBox.setEmptySelectionAllowed(false);
-        categoryComboBox.setEmptySelectionCaption("Please select Category");
-
-       categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> cat = (String) event.getValue());
 
         addButton.addClickListener((Button.ClickListener) event -> {
             BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(value.getValue())));
@@ -110,6 +114,6 @@ catAddingLayout.addComponents(category, addCatButton);
             getPage().reload();
         });
 
-        superLayout.addComponents(value, addButton, label, categoryComboBox, catAddingLayout);
+        layout.addComponents(value, addButton, label, categoryComboBox, catAddingLayout);
     }
 }
