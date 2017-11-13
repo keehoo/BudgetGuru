@@ -14,6 +14,7 @@ import com.vaadin.cdi.CDIUI;
 import com.vaadin.data.HasValue;
 import com.vaadin.data.provider.ListDataProvider;
 import com.vaadin.event.selection.SelectionListener;
+import com.vaadin.server.Responsive;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.*;
@@ -32,21 +33,34 @@ import java.util.Optional;
 public class BudgetItemAddUi extends AbstractUI {
 
     @Inject
+    private
     BudgetEntryDao budgetEntryDao;
 
     @Inject
+    private
     UserDao userDao;
 
     @Inject
+    private
     ExpenseCatDao catDao;
 
     private String cat;
+    private Panel addCatPanel;
+    private Panel addCostPanel;
+    private TextField inputCategoryTextField;
 
 
     @Override
     protected void init(VaadinRequest request) {
         super.init(request);
         setupTextFields();
+
+        HorizontalLayout hl = new HorizontalLayout();
+        hl.addComponents(addCostPanel, addCatPanel);
+        layout.addComponent(hl);
+        Responsive.makeResponsive(layout);
+
+
         if (!budgetEntryDao.budgetItemList().isEmpty()) {
             showTable();
         }
@@ -80,20 +94,29 @@ public class BudgetItemAddUi extends AbstractUI {
     }
 
     private void setupTextFields() {
-        TextField value = new TextField("Value");
+        setupAddCostPanel();
+        setupAddCategoryPanel();
+
+
+    /*    TextField value = new TextField("Value");
         Button addButton = new Button("Add cost");
         Label label = new Label("Category");
         ComboBox categoryComboBox = new ComboBox();
 
-        categoryComboBox.setItems(catDao.getCatNames());
+        Object[] categories = catDao.getCatNames();
+        System.out.println("Categories length = "+categories.length);
+
+        for (int i = 0; i < categories.length; i++) {
+            System.out.println("Category " + categories[i]);
+        }
+
+        categoryComboBox.setItems(categories);
+
         // categoryComboBox.setItemCaptionGenerator(Category::);
         categoryComboBox.setEmptySelectionAllowed(false);
         categoryComboBox.setEmptySelectionCaption("Please select Category");
 
         categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> cat = (String) event.getValue());
-
-
-
 
 
         HorizontalLayout catAddingLayout = new HorizontalLayout();
@@ -114,6 +137,71 @@ public class BudgetItemAddUi extends AbstractUI {
             getPage().reload();
         });
 
-        layout.addComponents(value, addButton, label, categoryComboBox, catAddingLayout);
+        layout.addComponents(value, addButton, label, categoryComboBox, catAddingLayout);*/
+    }
+
+    private void setupAddCategoryPanel() {
+        addCatPanel = new Panel("Add Custom Category");
+        addCatPanel.setWidth("400px");
+        addCatPanel.setHeight("300px");
+
+        FormLayout addCatLayout = new FormLayout();
+        addCatLayout.setSpacing(true);
+        addCatLayout.setMargin(true);
+        inputCategoryTextField = new TextField("New Category Name");
+        Button addCatButton = new Button("Add category");
+        setupClickListenerForAddCategoryButton(addCatButton);
+        addCatLayout.addComponents(inputCategoryTextField, addCatButton);
+        addCatPanel.setContent(addCatLayout);
+    }
+
+    private void setupClickListenerForAddCategoryButton(Button addCatButton) {
+        addCatButton.addClickListener((Button.ClickListener) event -> {
+            ExpenseCategory e = new ExpenseCategory();
+            e.setCategoryName(inputCategoryTextField.getValue().toUpperCase());
+            catDao.add(e);
+            getPage().reload();
+        });
+
+    }
+
+    private void setupAddCostPanel() {
+        addCostPanel = new Panel("Add cost");
+        addCostPanel.setWidth("400px");
+        addCostPanel.setHeight("300px");
+        //addCostPanel.setSizeFull();
+
+
+        FormLayout addCostLayout = new FormLayout();
+        addCostLayout.setSpacing(true);
+        addCostLayout.setMargin(true);
+        TextField inputCostTextField = new TextField("Cost");
+        Button addCostButton = new Button("Add cost");
+
+        ComboBox categoryComboBox = new ComboBox();
+        Object[] categories = catDao.getCatNames();
+        System.out.println("Categories length = " + categories.length);
+
+        for (int i = 0; i < categories.length; i++) {
+            System.out.println("Category " + categories[i]);
+        }
+        categoryComboBox.setItems(categories);
+
+        categoryComboBox.setEmptySelectionAllowed(false);
+        categoryComboBox.setEmptySelectionCaption("Please select Category");
+
+        categoryComboBox.addValueChangeListener((HasValue.ValueChangeListener) event -> cat = (String) event.getValue());
+
+        addCostLayout.addComponents(inputCostTextField, categoryComboBox, addCostButton);
+        addCostPanel.setContent(addCostLayout);
+
+        addCostButton.addClickListener((Button.ClickListener) event -> {
+            BudgetEntry b = new BudgetEntry(new BudgetItem(new BigDecimal(inputCostTextField.getValue())));
+            b.setUser(userDao.getUserByLogin((String) VaadinSession.getCurrent().getAttribute(SessionDataUtils.CURRENT_USER)).getId());
+            b.setCategory(cat);
+            budgetEntryDao.addBudgetEntry(b);
+            getPage().reload();
+        });
+
     }
 }

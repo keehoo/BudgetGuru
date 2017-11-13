@@ -1,14 +1,13 @@
 package com.kree.keehoo.budgetguru.Daos;
 
 
+import com.kree.keehoo.budgetguru.Budget.Category;
 import com.kree.keehoo.budgetguru.Budget.ExpenseCategory;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Stateless
 public class ExpenseCatDao {
@@ -33,10 +32,15 @@ public class ExpenseCatDao {
     }
 
     public Object[] getCatNames() {
-        List<String> list = new ArrayList<>();
+        Set<String> set = new HashSet<>();
         for (ExpenseCategory e : getAllCategories()) {
-            list.add(e.getCategoryName());
+            set.add(e.getCategoryName());
         }
-        return list.toArray();
+        addDefaultCategories(set);
+        return set.toArray();
+    }
+
+    private void addDefaultCategories(Set<String> list) {
+        list.addAll(Category.getAll());
     }
 }
