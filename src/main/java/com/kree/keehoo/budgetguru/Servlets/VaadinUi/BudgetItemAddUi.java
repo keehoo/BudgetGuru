@@ -44,6 +44,10 @@ public class BudgetItemAddUi extends AbstractUI {
     private
     ExpenseCatDao catDao;
 
+    @Inject
+    private
+    SessionDataUtils session;
+
     private String cat;
     private Panel addCatPanel;
     private Panel addCostPanel;
@@ -69,8 +73,8 @@ public class BudgetItemAddUi extends AbstractUI {
 
     private void showTable() {
         Grid<BudgetEntry> grid = new Grid<>();
-        grid.setCaption("My Grid");
-        grid.setItems(budgetEntryDao.budgetItemList());
+        grid.setCaption("Budget entries for user "+session.getCurrentUser());
+        grid.setItems(budgetEntryDao.getAllForLogin(userDao.getUserByLogin(session.getCurrentUser()).getId()));
         grid.setSizeFull();
         grid.addColumn(BudgetEntry::getValue).setCaption("Value");
         grid.addColumn(BudgetEntry::getUser).setCaption("User id");
