@@ -1,5 +1,6 @@
 package com.kree.keehoo.budgetguru.REST;
 
+import com.google.gson.Gson;
 import com.kree.keehoo.budgetguru.Daos.UserDao;
 import com.kree.keehoo.budgetguru.Users.User;
 
@@ -45,13 +46,14 @@ public class UsersRestService {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addContact(@Valid User user) {
 
+        String usjson = new Gson().toJson(user);
+
         System.out.println("User to be added: " + user.getName());
         if (userDao.addUser(user) == 202) {
-            return Response.accepted().build();}
-        else
-            {
-            return Response.status(0).build();
-            }
-
+            return Response.ok(usjson, MediaType.APPLICATION_JSON).build();
+        } else {
+            return Response.ok(usjson, MediaType.APPLICATION_JSON).build();
         }
     }
+}
+}
