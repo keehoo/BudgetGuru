@@ -51,4 +51,13 @@ public class BudgetEntryService {
         budgetEntryDao.addBudgetEntry(budgetEntry);
             return Response.accepted().build();
     }
+
+    @Path("/addAll")
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addBudgetEntries(@Valid List<BudgetEntry> listOfBudgetEntries) {
+
+        budgetEntryDao.addBudgetEntry(listOfBudgetEntries);
+        return Response.accepted().build();
+    }
 }

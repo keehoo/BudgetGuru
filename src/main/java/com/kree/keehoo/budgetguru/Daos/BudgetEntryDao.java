@@ -44,6 +44,14 @@ public class BudgetEntryDao {
 
             entityManager.persist(budgetEntry);
         }
+        System.out.println("Budget Entry list already contains "+budgetEntry);
+    }
+
+
+    public void addBudgetEntry(List<BudgetEntry> budgetEntries) {
+            for (BudgetEntry e : budgetEntries) {
+                addBudgetEntry(e);
+        }
     }
 
     public void updateBudgetEntry(BudgetEntry budgetEntry) {

@@ -106,4 +106,14 @@ public class BudgetEntry {
     public void setTimeOfCost(String timeOfCost) {
         this.timeOfCost = timeOfCost;
     }
+
+    @Override
+    public String toString() {
+        return "BudgetEntry{" +
+                "id=" + id +
+                ", user=" + user +
+                ", category='" + category + '\'' +
+                ", budgetItem=" + budgetItem +
+                '}';
+    }
 }
