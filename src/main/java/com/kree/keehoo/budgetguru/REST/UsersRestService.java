@@ -46,7 +46,8 @@ public class UsersRestService {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addContact(@Valid User user) {
 
-        String usjson = new Gson().toJson(user);
+        User u = getUserByLogin(user.getLogin());
+        String usjson = new Gson().toJson(u);
 
         System.out.println("User to be added: " + user.getName());
         if (userDao.addUser(user) == 202) {
